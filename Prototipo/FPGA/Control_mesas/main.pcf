@@ -1,0 +1,35 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Fri May 08 22:40:49 2020
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "inest0" LOCATE = SITE "D18" LEVEL 1;
+COMP "M4R" LOCATE = SITE "J3" LEVEL 1;
+COMP "inest1" LOCATE = SITE "E18" LEVEL 1;
+COMP "inest2" LOCATE = SITE "G17" LEVEL 1;
+COMP "M4L" LOCATE = SITE "E7" LEVEL 1;
+COMP "M1R" LOCATE = SITE "H1" LEVEL 1;
+COMP "inmes1" LOCATE = SITE "D17" LEVEL 1;
+PIN inmes1_pin<0> = BEL "inmes1" PINNAME PAD;
+PIN "inmes1_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "inmes2" LOCATE = SITE "E17" LEVEL 1;
+PIN inmes2_pin<0> = BEL "inmes2" PINNAME PAD;
+PIN "inmes2_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "inmes3" LOCATE = SITE "F18" LEVEL 1;
+PIN inmes3_pin<0> = BEL "inmes3" PINNAME PAD;
+PIN "inmes3_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "clk" LOCATE = SITE "E3" LEVEL 1;
+COMP "inmes4" LOCATE = SITE "C17" LEVEL 1;
+PIN inmes4_pin<0> = BEL "inmes4" PINNAME PAD;
+PIN "inmes4_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "M1L" LOCATE = SITE "H4" LEVEL 1;
+COMP "M3O" LOCATE = SITE "J2" LEVEL 1;
+COMP "M2R" LOCATE = SITE "G4" LEVEL 1;
+COMP "M2L" LOCATE = SITE "H2" LEVEL 1;
+COMP "M4O" LOCATE = SITE "J4" LEVEL 1;
+COMP "M1O" LOCATE = SITE "G1" LEVEL 1;
+COMP "M3R" LOCATE = SITE "F6" LEVEL 1;
+COMP "M3L" LOCATE = SITE "K1" LEVEL 1;
+COMP "M2O" LOCATE = SITE "G2" LEVEL 1;
+SCHEMATIC END;
+

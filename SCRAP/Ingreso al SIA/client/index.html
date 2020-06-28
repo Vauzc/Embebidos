@@ -1,0 +1,72 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>TIUN</h1>
+
+        <h4>Usuario del SIA</h4>
+        <input class="User" type="text" placeholder="User" />
+        <input class="Pass" type="password" placeholder="Password" />
+        <button type="submit" onclick="submitUser()">submit</button>
+        
+        <div class="container"></div>
+
+        <script>
+
+            function submitUser() {
+                const user = document.querySelector('.User').value;
+                const password = document.querySelector('.Pass').value;
+                const obj= {'user':user , 'pass':password};
+                fetch('http://localhost:3000/creators', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(obj)
+                    
+                })    
+            }
+
+            function newEl(type, attrs={}) {
+                const el = document.createElement(type);
+                for (let attr in attrs) {
+                    const value = attrs[attr];
+                    if (attr == 'innerText') el.innerText = value;
+                    else el.setAttribute(attr, value);
+                }
+                return el;
+            }
+
+            async function loadCreators() {
+                const res = await fetch('http://localhost:3000/creators');
+                const creators = await res.json();
+
+                const ctr = document.querySelector('.container');
+
+                creators.forEach(creator => {
+                    const card = newEl('div', {class: 'card'});
+                    const title = newEl('h4', {innerText: creator.name});
+                    const Facultad = newEl('h4', {innerText: creator.Facultad});
+                    card.appendChild(title);
+                    card.appendChild(Facultad);
+                    ctr.appendChild(card);
+                })
+            }
+
+            loadCreators();
+
+        </script>
+        <style>
+            .container {
+                display: flex;
+            }
+            .card {
+                margin: 5px;
+                padding: 20px;
+                border: 1px solid white;
+            }
+        </style>
+
+    </body>
+</html>

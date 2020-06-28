@@ -1,0 +1,215 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+D:\Xi\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 1 -n 3
+-fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf ucf.ucf
+
+Design file:              main.ncd
+Physical constraint file: main.pcf
+Device,package,speed:     xc7a100t,csg324,C,-1 (PRODUCTION 1.10 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock inest0 to Pad
+------------+-----------------+------------+-----------------+------------+------------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                        | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)       | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------------+--------+
+M2L         |        11.620(F)|      SLOW  |         3.966(F)|      FAST  |GND_1_o_GND_1_o_AND_5_o |   0.000|
+M2O         |        11.466(F)|      SLOW  |         3.913(F)|      FAST  |GND_1_o_GND_1_o_AND_5_o |   0.000|
+M2R         |        10.993(F)|      SLOW  |         3.721(F)|      FAST  |GND_1_o_GND_1_o_AND_5_o |   0.000|
+M3L         |        11.309(F)|      SLOW  |         4.024(F)|      FAST  |GND_1_o_GND_1_o_AND_12_o|   0.000|
+M3O         |        11.168(F)|      SLOW  |         3.965(F)|      FAST  |GND_1_o_GND_1_o_AND_12_o|   0.000|
+M3R         |        10.969(F)|      SLOW  |         3.884(F)|      FAST  |GND_1_o_GND_1_o_AND_12_o|   0.000|
+M4L         |        12.070(F)|      SLOW  |         4.254(F)|      FAST  |GND_1_o_GND_1_o_AND_22_o|   0.000|
+M4O         |        11.127(F)|      SLOW  |         3.868(F)|      FAST  |GND_1_o_GND_1_o_AND_22_o|   0.000|
+M4R         |        11.259(F)|      SLOW  |         3.918(F)|      FAST  |GND_1_o_GND_1_o_AND_22_o|   0.000|
+------------+-----------------+------------+-----------------+------------+------------------------+--------+
+
+Clock inest1 to Pad
+------------+-----------------+------------+-----------------+------------+------------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                        | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)       | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------------+--------+
+M2L         |        10.803(F)|      SLOW  |         3.723(F)|      FAST  |GND_1_o_GND_1_o_AND_5_o |   0.000|
+M2O         |        10.649(F)|      SLOW  |         3.670(F)|      FAST  |GND_1_o_GND_1_o_AND_5_o |   0.000|
+M2R         |        10.176(F)|      SLOW  |         3.478(F)|      FAST  |GND_1_o_GND_1_o_AND_5_o |   0.000|
+M3L         |        10.499(F)|      SLOW  |         3.786(F)|      FAST  |GND_1_o_GND_1_o_AND_12_o|   0.000|
+M3O         |        10.358(F)|      SLOW  |         3.727(F)|      FAST  |GND_1_o_GND_1_o_AND_12_o|   0.000|
+M3R         |        10.159(F)|      SLOW  |         3.646(F)|      FAST  |GND_1_o_GND_1_o_AND_12_o|   0.000|
+M4L         |        11.247(F)|      SLOW  |         4.008(F)|      FAST  |GND_1_o_GND_1_o_AND_22_o|   0.000|
+M4O         |        10.304(F)|      SLOW  |         3.622(F)|      FAST  |GND_1_o_GND_1_o_AND_22_o|   0.000|
+M4R         |        10.436(F)|      SLOW  |         3.672(F)|      FAST  |GND_1_o_GND_1_o_AND_22_o|   0.000|
+------------+-----------------+------------+-----------------+------------+------------------------+--------+
+
+Clock inest2 to Pad
+------------+-----------------+------------+-----------------+------------+------------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                        | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)       | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------------+--------+
+M2L         |        10.919(F)|      SLOW  |         3.743(F)|      FAST  |GND_1_o_GND_1_o_AND_5_o |   0.000|
+M2O         |        10.765(F)|      SLOW  |         3.690(F)|      FAST  |GND_1_o_GND_1_o_AND_5_o |   0.000|
+M2R         |        10.292(F)|      SLOW  |         3.498(F)|      FAST  |GND_1_o_GND_1_o_AND_5_o |   0.000|
+M3L         |        10.225(F)|      SLOW  |         3.670(F)|      FAST  |GND_1_o_GND_1_o_AND_12_o|   0.000|
+M3O         |        10.084(F)|      SLOW  |         3.611(F)|      FAST  |GND_1_o_GND_1_o_AND_12_o|   0.000|
+M3R         |         9.885(F)|      SLOW  |         3.530(F)|      FAST  |GND_1_o_GND_1_o_AND_12_o|   0.000|
+M4L         |        11.362(F)|      SLOW  |         4.029(F)|      FAST  |GND_1_o_GND_1_o_AND_22_o|   0.000|
+M4O         |        10.419(F)|      SLOW  |         3.643(F)|      FAST  |GND_1_o_GND_1_o_AND_22_o|   0.000|
+M4R         |        10.551(F)|      SLOW  |         3.693(F)|      FAST  |GND_1_o_GND_1_o_AND_22_o|   0.000|
+------------+-----------------+------------+-----------------+------------+------------------------+--------+
+
+Clock inmes1 to Pad
+------------+-----------------+------------+-----------------+------------+------------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                        | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)       | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------------+--------+
+M1L         |        14.600(F)|      SLOW  |         5.036(F)|      FAST  |inmes1_IBUF_BUFG        |   0.000|
+M1O         |        10.226(F)|      SLOW  |         3.516(F)|      FAST  |inmes1_IBUF_BUFG        |   0.000|
+M1R         |        10.227(F)|      SLOW  |         3.517(F)|      FAST  |inmes1_IBUF_BUFG        |   0.000|
+M2L         |        10.980(F)|      SLOW  |         3.836(F)|      FAST  |GND_1_o_GND_1_o_AND_5_o |   0.000|
+M2O         |        10.826(F)|      SLOW  |         3.783(F)|      FAST  |GND_1_o_GND_1_o_AND_5_o |   0.000|
+M2R         |        10.353(F)|      SLOW  |         3.591(F)|      FAST  |GND_1_o_GND_1_o_AND_5_o |   0.000|
+M3L         |        10.893(F)|      SLOW  |         3.967(F)|      FAST  |GND_1_o_GND_1_o_AND_12_o|   0.000|
+M3O         |        10.752(F)|      SLOW  |         3.908(F)|      FAST  |GND_1_o_GND_1_o_AND_12_o|   0.000|
+M3R         |        10.553(F)|      SLOW  |         3.827(F)|      FAST  |GND_1_o_GND_1_o_AND_12_o|   0.000|
+M4L         |        10.999(F)|      SLOW  |         3.988(F)|      FAST  |GND_1_o_GND_1_o_AND_22_o|   0.000|
+M4O         |        10.056(F)|      SLOW  |         3.602(F)|      FAST  |GND_1_o_GND_1_o_AND_22_o|   0.000|
+M4R         |        10.188(F)|      SLOW  |         3.652(F)|      FAST  |GND_1_o_GND_1_o_AND_22_o|   0.000|
+------------+-----------------+------------+-----------------+------------+------------------------+--------+
+
+Clock inmes2 to Pad
+------------+-----------------+------------+-----------------+------------+------------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                        | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)       | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------------+--------+
+M2L         |        10.875(F)|      SLOW  |         3.832(F)|      FAST  |GND_1_o_GND_1_o_AND_5_o |   0.000|
+M2O         |        10.721(F)|      SLOW  |         3.779(F)|      FAST  |GND_1_o_GND_1_o_AND_5_o |   0.000|
+M2R         |        10.248(F)|      SLOW  |         3.587(F)|      FAST  |GND_1_o_GND_1_o_AND_5_o |   0.000|
+M3L         |        10.355(F)|      SLOW  |         3.783(F)|      FAST  |GND_1_o_GND_1_o_AND_12_o|   0.000|
+M3O         |        10.214(F)|      SLOW  |         3.724(F)|      FAST  |GND_1_o_GND_1_o_AND_12_o|   0.000|
+M3R         |        10.015(F)|      SLOW  |         3.643(F)|      FAST  |GND_1_o_GND_1_o_AND_12_o|   0.000|
+M4L         |        11.063(F)|      SLOW  |         4.005(F)|      FAST  |GND_1_o_GND_1_o_AND_22_o|   0.000|
+M4O         |        10.120(F)|      SLOW  |         3.619(F)|      FAST  |GND_1_o_GND_1_o_AND_22_o|   0.000|
+M4R         |        10.252(F)|      SLOW  |         3.669(F)|      FAST  |GND_1_o_GND_1_o_AND_22_o|   0.000|
+------------+-----------------+------------+-----------------+------------+------------------------+--------+
+
+Clock inmes3 to Pad
+------------+-----------------+------------+-----------------+------------+------------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                        | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)       | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------------+--------+
+M3L         |        10.393(F)|      SLOW  |         3.743(F)|      FAST  |GND_1_o_GND_1_o_AND_12_o|   0.000|
+M3O         |        10.252(F)|      SLOW  |         3.684(F)|      FAST  |GND_1_o_GND_1_o_AND_12_o|   0.000|
+M3R         |        10.053(F)|      SLOW  |         3.603(F)|      FAST  |GND_1_o_GND_1_o_AND_12_o|   0.000|
+M4L         |        10.910(F)|      SLOW  |         3.915(F)|      FAST  |GND_1_o_GND_1_o_AND_22_o|   0.000|
+M4O         |         9.967(F)|      SLOW  |         3.529(F)|      FAST  |GND_1_o_GND_1_o_AND_22_o|   0.000|
+M4R         |        10.099(F)|      SLOW  |         3.579(F)|      FAST  |GND_1_o_GND_1_o_AND_22_o|   0.000|
+------------+-----------------+------------+-----------------+------------+------------------------+--------+
+
+Clock inmes4 to Pad
+------------+-----------------+------------+-----------------+------------+------------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                        | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)       | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------------+--------+
+M4L         |        10.276(F)|      SLOW  |         3.697(F)|      FAST  |GND_1_o_GND_1_o_AND_22_o|   0.000|
+M4O         |         9.333(F)|      SLOW  |         3.311(F)|      FAST  |GND_1_o_GND_1_o_AND_22_o|   0.000|
+M4R         |         9.465(F)|      SLOW  |         3.361(F)|      FAST  |GND_1_o_GND_1_o_AND_22_o|   0.000|
+------------+-----------------+------------+-----------------+------------+------------------------+--------+
+
+Clock to Setup on destination clock inest0
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+inest0         |         |         |    1.508|    1.508|
+inest1         |         |         |    0.466|    0.466|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock inest1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+inest0         |         |         |    2.273|    2.273|
+inest1         |         |         |    1.009|    1.009|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock inest2
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+inest0         |         |         |    2.488|    2.488|
+inest1         |         |         |    1.224|    1.224|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock inmes1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+inest0         |         |         |    2.246|    2.246|
+inest1         |         |         |    0.982|    0.982|
+inest2         |         |         |    0.872|    0.872|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock inmes2
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+inest0         |         |         |    2.369|    2.369|
+inest1         |         |         |    1.105|    1.105|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock inmes3
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+inest0         |         |         |    2.351|    2.351|
+inest1         |         |         |    1.087|    1.087|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock inmes4
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+inest0         |         |         |    2.835|    2.835|
+inest1         |         |         |    1.571|    1.571|
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Fri May 08 22:41:23 2020 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4949 MB
+
+
+
