@@ -1,0 +1,455 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-button fill="clear" slot="start" routerLink="/grupos-e-inicio">
+      <ion-icon name="return-down-back" color=white></ion-icon>
+    </ion-button>
+    <ion-title align="center">
+      Grupos Deportivos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides pager="true" [options]="slideOpts" color="medium">
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img src="assets/1_mermaids.jpg"></ion-img>
+          <ion-card-title>Mermaids Dance Team</ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon> 
+          <ion-label align="center">Facultad: Medicina</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-label align="center">Mermaids Dance Team UN</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          Grupo de baile de porrismo con pompones (pomps) de modalidad competitivo
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button color="facebook"
+            (click)="openFacebook('MermaidsDanceUN', 'https://m.facebook.com/MermaidsDanceUN/')">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <strong align="right">Siguenos en Facebook</strong>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+
+    <!--<ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img width="10" height="10" src="assets/2_basket.jpg"></ion-img>
+          <ion-card-title>Selección de baloncesto</ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon>
+          <ion-label align="center">Facultad: No Adscrito</ion-label>
+        </ion-item>
+
+         <ion-card-content>
+          <strong>Selección de baloncesto. </strong>
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button color="success">REDIRECCION A ERROR</ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide> -->
+
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img width="10" height="10" src="assets/3_mma.jpg"></ion-img>
+          <ion-card-title>MMA-UN (Mixed Martial Arts)</ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon>
+          <ion-label align="center">Facultad: Ingenieria</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-label align="center">MMA-UN (Mixed MArtial Arts)</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          MMA-UN es un grupo de estudiantes, administrativos, egresados y profesores de la Universidad Nacional de
+          Colombia- Sede Bogotá, que entrenan y practican las Artes Marciales Mixtas (MMA), dentro de un contexto
+          netamente deportivo, en donde no se atenta contra la integridad física de los miembros del grupo.
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button color="facebook"
+            (click)="openFacebook('groups/mmaunal', 'https://www.facebook.com/groups/mmaunal/')">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <strong align="right">Siguenos en Facebook</strong>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img width="10" height="10" src="assets/4_parkour.jpg"></ion-img>
+          <ion-card-title>Parkour UNAL</ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon>
+          <ion-label align="center">Facultad: No Adscrito</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-label align="center">HakUNa Parkour (Parkour UNAL)</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-instagram"></ion-icon>
+          <ion-label align="center">@parkour.unal</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          Grupo de entrenamiento de Parkour
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button fill="clear" color="white"
+            style="background-image:url('assets/instagram.png'); background-size:cover"
+            (click)="openInstagram('parkour.unal', 'https://www.instagram.com/parkour.unal/')">
+            <ion-icon name="logo-instagram"></ion-icon>
+            <strong align="right">Siguenos en Instagram</strong>
+          </ion-button>
+          <ion-button color="facebook"
+            (click)="openFacebook('groups/822328471240913', 'https://www.facebook.com/groups/822328471240913/')">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <strong align="right">Siguenos en Facebook</strong>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img width="10" height="10" src="assets/5_tiro.jpg"></ion-img>
+          <ion-card-title>Arquería Unal </ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon>
+          <ion-label align="center">Facultad: No Adscrito</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-label align="center">Arqueria UNAL</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          Grupo para el aprendizaje y práctica de técnicas para el tiro con arco. Su campo queda junto a la concha
+          acústica y hay supervisores para prácticas varios días de la semana, especialmente los viernes.
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button color="facebook" (click)="openFacebook('ArqueriaUNAL', 'https://www.facebook.com/ArqueriaUNAL')">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <strong align="right">Siguenos en Facebook</strong>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img width="10" height="10" src="assets/6_ultimate.jpg"></ion-img>
+          <ion-card-title>Selección de Ultimate</ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon>
+          <ion-label align="center">Facultad: No Adscrito</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-label align="center">Selección de Ultimate UN</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-instagram"></ion-icon>
+          <ion-label align="center">@seleultimateunal</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          Somos la selección de Ultimate de la universidad, conformada por gente de todas las carreras. Tenemos dos
+          equipos de competencia en las modalidades femenino y masculino. Actualmente jugamos ASCUN. Los entrenamientos
+          son tres veces por semana, martes, miércoles y jueves de 4 a 6 en cancha 8 o en el estadio dependiendo del
+          día. Los horarios pueden variar cada semestre. Para pertenecer a la selección se realizan tryouts al inicio de
+          cada semestre, los cuales son anunciados por nuestras redes sociales, sin embargo, personas que no pertenezcan
+          a la selección pero que quieran ir a jugar o a aprender también son bienvenidas y por lo general se dispone de
+          un horario para formativo. Lo único que necesitas es agua, ropa deportiva y guayos si tienes. Cualquier duda
+          nos puedes contactar por nuestras redes sociales.
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button fill="clear" color="white"
+            style="background-image:url('assets/instagram.png'); background-size:cover"
+            (click)="openInstagram('seleultimateunal', 'https://www.instagram.com/seleultimateunal/')">
+            <ion-icon name="logo-instagram"></ion-icon>
+            <strong align="right">Siguenos en Instagram</strong>
+          </ion-button>
+          <ion-button color="facebook"
+            (click)="openFacebook('SeleccionUltimateUnal', 'https://www.facebook.com/SeleccionUltimateUnal/')">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <strong align="right">Siguenos en Facebook</strong>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img width="10" height="10" src="assets/7_owl.jpg"></ion-img>
+          <ion-card-title>Owl's Dance Crew</ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon>
+          <ion-label align="center">Facultad: Ciencias Humanas, Ingeniería y Odontología</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="mail-outline"></ion-icon>
+          <ion-label align="center">mcarmonac@unal.edu.co</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-instagram"></ion-icon>
+          <ion-label align="center">@owlsdancecrew</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          Owl's Dance Crew es un proyecto de danza urbana propuesto por estudiantes de la Universidad Nacional de
+          Colombia – Sede Bogotá que busca brindar a través de talleres, ensayos y actividades, un espacio para que los
+          y las estudiantes puedan mejorar sus capacidades motrices, físicas y su desenvolvimiento con el público.
+          Además, procura proporcionar un ambiente adecuado para sobrellevar el estrés académico y personal a través del
+          baile.
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button fill="clear" color="white"
+            style="background-image:url('assets/instagram.png'); background-size:cover"
+            (click)="openInstagram('owlsdancecrew', 'https://www.instagram.com/owlsdancecrew/')">
+            <ion-icon name="logo-instagram"></ion-icon>
+            <strong align="right">Siguenos en Instagram</strong>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img width="10" height="10" src="assets/8_buhos.png"></ion-img>
+          <ion-card-title>Buhos UN</ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon>
+          <ion-label align="center">Facultad: No Adscrito</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-label align="center">Buhos UN Football Americano</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-instagram"></ion-icon>
+          <ion-label align="center">@buhosamericanfootball</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          Equipo de fútbol americano de la Universidad Nacional de Colombia, el cual cuenta con 3 modalidades, tackle,
+          flag femenimo y flag masculino.
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button fill="clear" color="white"
+            style="background-image:url('assets/instagram.png'); background-size:cover"
+            (click)="openInstagram('buhosamericanfootball', 'https://www.instagram.com/buhosamericanfootball/')">
+            <ion-icon name="logo-instagram"></ion-icon>
+            <strong align="right">Siguenos en Instagram</strong>
+          </ion-button>
+          <ion-button color="facebook"
+            (click)="openFacebook('buhos.un.football', 'https://www.facebook.com/buhos.un.football/')">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <strong align="right">Siguenos en Facebook</strong>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img width="10" height="10" src="assets/9_gladiadores.jpg"></ion-img>
+          <ion-card-title>Gladiadores UN</ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon>
+          <ion-label align="center">Facultad: Medicina</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-label align="center">Pagina: Gladiadores UN</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-label align="center">Grupo: Gladiadores UN</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="mail-outline"></ion-icon>
+          <ion-label align="center">gladiadoresun@gmail.com</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-instagram"></ion-icon>
+          <ion-label align="center">@gladiadoresun</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          Nuestro objetivo es promover el Softcombat como deporte alternativo. El principal foco de acción estará en la
+          realización de sesiones de entrenamiento físico y entrenamiento técnico, que se realizaran con regularidad
+          semanal. Buscamos fomentar el buen uso del tiempo libre en el campus universitario, por medio de una actividad
+          deportiva, además de ser una actividad recreativa y competitiva que fomenta muchos valores ayudando al
+          crecimiento personal.
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button fill="clear" color="white"
+            style="background-image:url('assets/instagram.png'); background-size:cover"
+            (click)="openInstagram('gladiadoresun', 'https://www.instagram.com/gladiadoresun/')">
+            <ion-icon name="logo-instagram"></ion-icon>
+            <strong align="right">Siguenos en Instagram</strong>
+          </ion-button>
+          <ion-button color="facebook"
+            (click)="openFacebook('GladiadoresUN', 'https://www.facebook.com/GladiadoresUN')">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <strong align="right">Siguenos en Facebook</strong>
+          </ion-button>
+          <ion-button color="facebook"
+            (click)="openFacebook('groups/877973199006724', 'https://www.facebook.com/groups/877973199006724/')">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <strong align="right">Siguenos en Facebook</strong>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img width="10" height="10" src="assets/10_patinar.jpg"></ion-img>
+          <ion-card-title>Grupo de patinaje APUN</ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon>
+          <ion-label align="center">Facultad: Ciencias Humanas, Medicina, Ingeniería, Ciencias</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-instagram"></ion-icon>
+          <ion-label align="center"> @apatinarun</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          Grupo estudiantil de patinaje de velocidad universitario, abierto a la comunidad universitaria en los niveles
+          de iniciación (aprender a patinar), intermedio y avanzado, con miras a competencias, festivales, maratones,
+          etc. Aplicamos jornadas de patinaje, técnica y físico enfocado en el patinaje de velocidad.
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button fill="clear" color="white"
+            style="background-image:url('assets/instagram.png'); background-size:cover"
+            (click)="openInstagram('apatinarun', 'https://www.instagram.com/apatinarun/')">
+            <ion-icon name="logo-instagram"></ion-icon>
+            <strong align="right">Siguenos en Instagram</strong>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img width="10" height="10" src="assets/11_voley.jpg"></ion-img>
+          <ion-card-title>Selección de voleibol UN</ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon>
+          <ion-label align="center">Facultad: No Adscrito</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-instagram"></ion-icon>
+          <ion-label align="center">@unvolleyball</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          El equipo de voleibol femenino y masculino de la Universidad Nacional está conformado por estudiantes de todas
+          las carreras que tienen experiencia a nivel competitivo o que cuentan con bases técnicas y/o conocimientos del
+          deporte de conjunto. Cada semestre se realiza una convocatoria abierta en donde se da un espacio para que los
+          interesados asistan y realicen una serie de pruebas de acuerdo a los criterios del entrenador a cargo. Los
+          entrenamientos se realizan los días lunes y miércoles de 6:00pm a 8:00pm para el femenino y de 8:00pm a
+          10:00pm para el masculino, adicionalmente se entrenan los viernes de 2:00pm a 4:00pm. Si consideras que puedes
+          desarrollar tus habilidades y talentos en este deporte no pierdas la oportunidad de presentarte.
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button fill="clear" color="white"
+            style="background-image:url('assets/instagram.png'); background-size:cover"
+            (click)="openInstagram('unvolleyball', 'https://www.instagram.com/unvolleyball/')">
+            <ion-icon name="logo-instagram"></ion-icon>
+            <strong align="right">Siguenos en Instagram</strong>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img width="10" height="10" src="assets/capital.png"></ion-img>
+          <ion-card-title>Capital Owls UN</ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon>
+          <ion-label align="center">Facultad: Ingenieria, Odontologia y Ciencias</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-label align="center">Capital Owls - UNacional</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          Creado en 2019 como iniciativa de estudiantes de ingenieria interesados en el deporte, especialmente al
+          Softbol y Beisbol. Iniciativa que busca hombres y mujeres de cualquier facultad para la competicion y
+          recreacion en este deporte. No es necesario conocimiento previo ni disponer de los implementos necesarios para
+          la practica. Viernes de 2pm a 5pm, Los esperamos los viernes en nuestro diamante, al lado de cine y
+          televisión. Por favor Llegar a tiempo, ropa comoda, gorra, proteccion solar, hombres y mujeres por igual (el
+          esntrenamiento es mixto). Estamos para aprender y divertirnos.
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button color="facebook"
+            (click)="openFacebook('Capital-Owls-UNacional-108673657183268', 'https://www.facebook.com/Capital-Owls-UNacional-108673657183268/')">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <strong align="right">Siguenos en Facebook</strong>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-slide>
+  </ion-slides>
+
+</ion-content>

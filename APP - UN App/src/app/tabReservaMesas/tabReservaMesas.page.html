@@ -1,0 +1,95 @@
+<ion-app>
+  <ion-header>
+    <ion-toolbar color="secondary">
+      <ion-title>Reserva de mesas</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content fullscreen>
+    <ion-card>
+      <ion-card-header color="mio4" class="esp2">
+        <ion-card-title>Tus reservas actuales</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item class="esp" *ngFor="let item of Reservas">
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+          <ion-label class="ion-text-wrap">
+            <ion-text style="font-size:17px">
+              Mesa {{item.mesa}} ({{item.inicio.split(":")[0]}}:{{item.inicio.split(":")[1]}} -
+              {{item.fin.split(":")[0]}}:{{item.fin.split(":")[1]}})
+            </ion-text>
+          </ion-label>
+          <ion-button fill="clear" side="end" (click)="Eliminar(item)">
+            <ion-icon name="close-circle-outline"> </ion-icon>
+          </ion-button>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+
+
+    <ion-card>
+      <ion-card-header color="mio4" class="esp2">
+        <ion-card-title>Nueva reserva</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label>Hora de inicio</ion-label>
+          <ion-select placeholder="Elija Uno" [(ngModel)]="Hini.numero" (ionChange)="validate(Hini.numero)">
+            <ion-select-option value=7>07:00</ion-select-option>
+            <ion-select-option value=8>08:00</ion-select-option>
+            <ion-select-option value=9>09:00</ion-select-option>
+            <ion-select-option value=10>10:00</ion-select-option>
+            <ion-select-option value=11>11:00</ion-select-option>
+            <ion-select-option value=12>12:00</ion-select-option>
+            <ion-select-option value=13>13:00</ion-select-option>
+            <ion-select-option value=14>14:00</ion-select-option>
+            <ion-select-option value=15>15:00</ion-select-option>
+            <ion-select-option value=16>16:00</ion-select-option>
+            <ion-select-option value=17>17:00</ion-select-option>
+            <ion-select-option value=18>18:00</ion-select-option>
+            <ion-select-option value=19>19:00</ion-select-option>
+            <ion-select-option value=20>20:00</ion-select-option>
+            <ion-select-option value=21>21:00</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item *ngIf="Hini.numero!=''"> 
+          <ion-label>Hora de fin</ion-label>
+          <ion-select placeholder="Elija Uno" [(ngModel)]="Hfin1.value" (ionChange)="validate2()">
+            <ion-select-option *ngIf="Hfin[8].set" value=8>08:00</ion-select-option>
+            <ion-select-option *ngIf="Hfin[9].set" value=9>09:00</ion-select-option>
+            <ion-select-option *ngIf="Hfin[10].set" value=10>10:00</ion-select-option>
+            <ion-select-option *ngIf="Hfin[11].set" value=11>11:00</ion-select-option>
+            <ion-select-option *ngIf="Hfin[12].set" value=12>12:00</ion-select-option>
+            <ion-select-option *ngIf="Hfin[13].set" value=13>13:00</ion-select-option>
+            <ion-select-option *ngIf="Hfin[14].set" value=14>14:00</ion-select-option>
+            <ion-select-option *ngIf="Hfin[15].set" value=15>15:00</ion-select-option>
+            <ion-select-option *ngIf="Hfin[16].set" value=16>16:00</ion-select-option>
+            <ion-select-option *ngIf="Hfin[17].set" value=17>17:00</ion-select-option>
+            <ion-select-option *ngIf="Hfin[18].set" value=18>18:00</ion-select-option>
+            <ion-select-option *ngIf="Hfin[19].set" value=19>19:00</ion-select-option>
+            <ion-select-option *ngIf="Hfin[20].set" value=20>20:00</ion-select-option>
+            <ion-select-option *ngIf="Hfin[21].set" value=21>21:00</ion-select-option>
+            <ion-select-option *ngIf="Hfin[22].set" value=22>22:00</ion-select-option>
+          </ion-select>
+        </ion-item>
+        
+        <ion-card *ngIf="bool2==true" color="secondary" button=true (click)="validate3()">
+        <ion-card-content class="esp2"><h3>Verficar mesas disponibles</h3></ion-card-content>
+        </ion-card>
+        <ion-item *ngIf="bool==true">
+          <ion-label>Número de mesa:</ion-label>
+          <ion-select placeholder="Elija una" [(ngModel)]="Rmeson" (ionChange)="Ajuste(Rmeson)">
+            <div *ngFor="let item of libres;">
+              <ion-select-option [value]='item'>Mesa {{item}}</ion-select-option>
+            </div>
+          </ion-select>
+        </ion-item>
+      </ion-card-content>
+
+      <ion-button [disabled]="Fin()==false" expand="block" color="secondary" (click)="Reservar()">Guardar</ion-button>
+    </ion-card>
+    <ion-button  expand="block" color="secondary" routerLink="/Disponibilidad">Verificar disponibilidad mesas</ion-button>
+  </ion-content>
+
+</ion-app>

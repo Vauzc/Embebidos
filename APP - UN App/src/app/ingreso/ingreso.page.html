@@ -1,0 +1,22 @@
+
+<ion-content [fullscreen]="true">
+
+
+    <ion-item lines="none" >
+    <img class="icon" src="assets/img/logo.png">
+  </ion-item>
+    <br>
+    <br>
+    <form [formGroup]="slideOneForm">
+      <ion-item class="lab">
+        <ion-label position="floating">Ingrese su usuario</ion-label>
+        <ion-input formControlName="User" type="text" ></ion-input>
+      </ion-item>
+      <br>
+      <br>
+    <ion-button expand="full" color="dark" [disabled]="!slideOneForm.valid" (click)="save()">Iniciar sesión</ion-button>
+    <ion-button expand="full" color="dark" routerLink="/login" >Registrarse</ion-button>
+</form>
+ 
+  
+</ion-content>

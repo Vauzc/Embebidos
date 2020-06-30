@@ -1,0 +1,465 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-button fill="clear" slot="start" routerLink="/grupos-e-inicio">
+      <ion-icon name="return-down-back" color=white></ion-icon>
+    </ion-button>
+    <ion-title align="center">
+      Grupos Artísticos (GAI)
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-slides pager="true" [options]="slideOpts" color="medium">
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img width="10" height="10" src="assets/2_1_cuenta.jpg"></ion-img>
+          <ion-card-title>Narración Oral - Nornas</ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon> 
+          <ion-label align="center">Facultad: No Adscrito</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-instagram"></ion-icon>
+          <ion-label align="center">@nacho.cuenta</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          Grupo Artistico Institucional de Narración Oral. Espacio para el desarrollo y ejercicio de habilidades de
+          narración oral y comunicación. Encargado del manejo de las sesiones de cuentería de Nacho Cuenta todos los
+          jueves en los auditorios de aulas de ciencias humanas
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button fill="clear" color="white"
+            style="background-image:url('assets/instagram.png'); background-size:cover"
+            (click)="openInstagram('nacho.cuenta', 'https://www.instagram.com/nacho.cuenta/')">
+            <ion-icon name="logo-instagram"></ion-icon>
+            <strong align="right">Siguenos en Instagram</strong>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-slide>
+  
+
+  <ion-slide>
+    <ion-card>
+      <ion-card-header>
+        <ion-img width="10" height="10" src="assets/4_2_teatro.jpg"></ion-img>
+        <ion-card-title>Teatro experimental</ion-card-title>
+      </ion-card-header>
+
+      <ion-item>
+        <ion-icon name="business-outline"></ion-icon>
+        <ion-label align="center">Facultad: No Adscrito</ion-label>
+      </ion-item>          
+      <ion-item>
+        <ion-icon name="logo-instagram"></ion-icon> 
+        <ion-label align="center">@experimenteme_esta</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="logo-facebook"></ion-icon> 
+        <ion-label align="center">Teatro Experimental UN</ion-label>
+      </ion-item>
+
+      <ion-card-content>
+        El trabajo expresivo que desarrolla el grupo parte de la antropología teatral y se enfoca en preparar al cuerpo para decir algo imbuido de la esencia de cada ser. Así, los integrantes del grupo –en contacto con las realida- des que encuentran en sus entornos cercanos y con las referencias del teatro universal y nacional–, leen textos, los estudian en procesos de montaje, y dialo- gan permanentemente sobre los procesos del grupo, las situaciones que los influyen en el ámbito político y social, y su intención de promover una reflexión crítica en el espectador. Este aprendizaje complementa para ellos la academia y la vida porque les muestra otras posibilidades de crecer y comunicarse con el mundo. 
+      </ion-card-content>
+      <ion-card-content>
+        <ion-button color="success" (click)="openUrl('http://bienestar.bogota.unal.edu.co/ver_noticia.php?id_noticia=560')">Noticia</ion-button>
+        <ion-button color="success" (click)="openUrl('http://bienestar.bogota.unal.edu.co/cultura.php')">Mas información</ion-button>
+        <ion-button fill="clear" color="white" style="background-image:url('assets/instagram.png'); background-size:cover" (click)="openInstagram('experimenteme_esta', 'https://www.instagram.com/experimenteme_esta/')">
+          <ion-icon name="logo-instagram"></ion-icon>
+          <strong align="right">Siguenos en Instagram</strong>
+        </ion-button>
+        <ion-button color="facebook" (click)="openFacebook('teatroexperimentalUN', 'https://www.facebook.com/teatroexperimentalUN')">
+          <ion-icon name="logo-facebook"></ion-icon>
+          <strong align="right">Siguenos en Facebook</strong>
+        </ion-button>
+    </ion-card-content>
+    </ion-card>
+
+  </ion-slide>
+
+  
+  <ion-slide>
+    <ion-card>
+      <ion-card-header>
+        <ion-img width="10" height="10" src="assets/4_4_danza.jpg"></ion-img>
+        <ion-card-title>Danza Contemporanea</ion-card-title>
+      </ion-card-header>
+
+      <ion-item>
+        <ion-icon name="business-outline"></ion-icon>
+        <ion-label align="center">Facultad: No Adscrito</ion-label>
+      </ion-item>
+
+      <ion-card-content>
+        Mediante la exploración del universo de la danza contemporánea a través de técnicas de movimiento e improvisación y de la experimentación en el terreno de la creación coreográfica, este grupo busca profundizar en las posibilidades de movimiento de los cuerpos y en las capacidades físicas, sensoriales y de interacción de sus integrantes.
+      </ion-card-content>
+      <ion-card-content>
+        <ion-button color="success" (click)="openUrl('http://bienestar.bogota.unal.edu.co/cultura.php')">Mas información</ion-button>
+    </ion-card-content>
+    </ion-card>
+
+  </ion-slide>
+
+  <ion-slide>
+    <ion-card>
+      <ion-card-header>
+        <ion-img width="10" height="10" src="assets/4_5_danzas.jpg"></ion-img>
+        <ion-card-title>Danzas Folcloricas</ion-card-title>
+      </ion-card-header>
+
+      <ion-item>
+        <ion-icon name="business-outline"></ion-icon>
+        <ion-label align="center">Facultad: No Adscrito</ion-label>
+      </ion-item>
+
+      <ion-card-content>
+        Para los integrantes de este grupo, aprender de las prácticas musicales y dancísticas de distintas regiones de Colombia enfocadas en la Región Andina, permite crear identidad, sentido de pertenencia y conocer culturas del país distintas, al relacionarse con algunas de sus prácticas, objetos, formas de interactuar de cada comunidad y sus contextos durante el proceso de estudio y montaje de las piezas danzadas. Es un espacio que propicia el reconocimiento de la gran diversidad de danzas, bailes y juegos coreográficos del país.
+      </ion-card-content>
+      <ion-card-content>
+        <ion-button color="success" (click)="openUrl('http://bienestar.bogota.unal.edu.co/cultura.php')">Mas información</ion-button>
+    </ion-card-content>
+    </ion-card>
+
+  </ion-slide>
+
+  <ion-slide>
+    <ion-card>
+      <ion-card-header>
+        <ion-img width="10" height="10" src="assets/4_6_cantos.png"></ion-img>
+        <ion-card-title>Cantos y danzas afrocolombianas</ion-card-title>
+      </ion-card-header>
+
+      <ion-item>
+        <ion-icon name="business-outline"></ion-icon>
+        <ion-label align="center">Facultad: No Adscrito</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="logo-instagram"></ion-icon> 
+        <ion-label align="center">@cda.un</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="logo-facebook"></ion-icon> 
+        <ion-label align="center">Cantos y Danzas Afrocolombianas UN</ion-label>
+      </ion-item>
+
+      <ion-card-content>
+        Las expresiones de ánimo y alegría de estas danzas y cantos se mezclan con el interés de los estudiantes por las culturas originarias de algunos y por conocer otras regiones y costumbres del país, por medio de la danza y la música. Estas expresiones diversas, poco conocidas o que incluso han sido olvidadas es una de las fortalezas de este grupo fundado en 1962. Sus integrantes destacan la disposición del colectivo para vincular a todos, el trabajo con ritmos más movidos conectados con las raíces afrocolombianas, los lazos de amistad que se tejen en el interior del grupo, y la combinación del legado de antiguos miembros del grupo con un proceso de investigación creativa constante.
+      </ion-card-content>
+      <ion-card-content>
+        <ion-button color="success" (click)="openUrl('http://bienestar.bogota.unal.edu.co/cultura.php')">Mas información</ion-button>
+        <ion-button fill="clear" color="white" style="background-image:url('assets/instagram.png'); background-size:cover" (click)="openInstagram('cda.un', 'https://www.instagram.com/cda.un/')">
+          <ion-icon name="logo-instagram"></ion-icon>
+          <strong align="right">Siguenos en Instagram</strong>
+        </ion-button>
+        <ion-button color="facebook" (click)="openFacebook('cda.un1', 'https://www.facebook.com/cda.un1/')">
+          <ion-icon name="logo-facebook"></ion-icon>
+          <strong align="right">Siguenos en Facebook</strong>
+        </ion-button>
+    </ion-card-content>
+    </ion-card>
+
+  </ion-slide>
+
+  <ion-slide>
+    <ion-card>
+      <ion-card-header>
+        <ion-img width="10" height="10" src="assets/4_7_tambores.jpg"></ion-img>
+        <ion-card-title>Gaitas y tambores</ion-card-title>
+      </ion-card-header>
+
+      <ion-item>
+        <ion-icon name="business-outline"></ion-icon>
+        <ion-label align="center">Facultad: No Adscrito</ion-label>
+      </ion-item>
+
+      <ion-card-content>
+        En este espacio se encuentran personas interesadas por la música o que han explorado previamente sonidos de instrumentos como las gaitas, el tambor, entre otros. La pasión y dedicación de este grupo surge del proceso de estudiar y experimentar con la música tradicional del Litoral Atlántico y las sabanas de Bolívar, que los conecta con saberes, tradiciones, paisajes y gente de culturas diferentes, y les permite comunicarse con lo indígena, lo ancestral y lo afrocolombiano.
+      </ion-card-content>
+      <ion-card-content>
+        <ion-button color="success" (click)="openUrl('http://bienestar.bogota.unal.edu.co/cultura.php')">Mas información</ion-button>
+    </ion-card-content>
+    </ion-card>
+
+  </ion-slide>
+
+  <ion-slide>
+    <ion-card>
+      <ion-card-header>
+        <ion-img width="10" height="10" src="assets/4_8_chirimia.jpg"></ion-img>
+        <ion-card-title>Chirimía y conjuntos de marimba</ion-card-title>
+      </ion-card-header>
+
+      <ion-item>
+        <ion-icon name="business-outline"></ion-icon>
+        <ion-label align="center">Facultad: No Adscrito</ion-label>
+      </ion-item>
+
+      <ion-card-content>
+        Acercarse a lo propio y a lo distinto es una sensación que integra el trabajo de este grupo. La diversidad de culturas de las cuales sus integrantes provienen genera en este espacio la posibilidad de estar más cerca de las raíces culturales de algunos y reconocer ritmos y prácticas musicales de esta región del Pacífico como parte de las tradiciones colombianas. De manera simultánea, la inquietud por profundizar en conocimientos musicales propios de las culturas de esta región es un interés común de sus integrantes, quienes se comunican en el grupo a través de otros lenguajes cercanos al arte y complementan sus visiones y experiencias, mediante la alegría, el reconocimiento de todos por su riqueza cultural y el goce por la música afrocolombiana.
+      </ion-card-content>
+      <ion-card-content>
+        <ion-button color="success" (click)="openUrl('http://bienestar.bogota.unal.edu.co/cultura.php')">Mas información</ion-button>
+    </ion-card-content>
+    </ion-card>
+
+  </ion-slide>
+
+  <ion-slide>
+    <ion-card>
+      <ion-card-header>
+        <ion-img width="10" height="10" src="assets/4_9_andina.jpg"></ion-img>
+        <ion-card-title>Música Andina</ion-card-title>
+      </ion-card-header>
+
+      <ion-item>
+        <ion-icon name="business-outline"></ion-icon>
+        <ion-label align="center">Facultad: No Adscrito</ion-label>
+      </ion-item>
+
+      <ion-card-content>
+        Este espacio de investigación y formación musical permite que los integrantes se encuentren con sus raíces culturales y desarrollen una memoria de una parte extensa de la música colombiana en torno a los sonidos y las músicas de la Región Andina. Su formación técnica individual en la ejecución de instrumentos de percusión, de cuerdas y vientos se complementa con el trabajo colectivo durante el estudio y montaje de piezas que surgen de acuerdo con las preferencias grupales y personales de los estudiantes, con la orientación del profesor.
+      </ion-card-content>
+      <ion-card-content>
+        <ion-button color="success" (click)="openUrl('http://bienestar.bogota.unal.edu.co/cultura.php')">Mas información</ion-button>
+    </ion-card-content>
+    </ion-card>
+
+  </ion-slide>
+
+  <ion-slide>
+    <ion-card>
+      <ion-card-header>
+        <ion-img width="10" height="10" src="assets/4_10_arabe.jpg"></ion-img>
+        <ion-card-title>Danza árabe</ion-card-title>
+      </ion-card-header>
+
+      <ion-item>
+        <ion-icon name="business-outline"></ion-icon>
+        <ion-label align="center">Facultad: No Adscrito</ion-label>
+      </ion-item>          
+      <ion-item>
+        <ion-icon name="logo-instagram"></ion-icon> 
+        <ion-label align="center">habibiarabe_un</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="logo-facebook"></ion-icon> 
+        <ion-label align="center">Habibi UN</ion-label>
+      </ion-item>
+
+      <ion-card-content>
+        Este grupo se identifica como un espacio de aprendizaje donde la danza árabe abre posibilidades de expresión corporal e interacción entre sus integrantes, y les permite afianzar su seguridad y confianza en diferentes contextos. El trabajo práctico del grupo combina aspectos técnicos y culturales de esta danza con la investigación realizada en clase, tanto en los temas de trabajo como en las posibilidades de movimiento, que luego toman forma en las coreografías.
+      </ion-card-content>
+      <ion-card-content>
+        <ion-button color="success" (click)="openUrl('http://bienestar.bogota.unal.edu.co/cultura.php')">Mas información</ion-button>
+        <ion-button fill="clear" color="white" style="background-image:url('assets/instagram.png'); background-size:cover" (click)="openInstagram('habibiarabe_un', 'https://www.instagram.com/habibiarabe_un/')">
+          <ion-icon name="logo-instagram"></ion-icon>
+          <strong align="right">Siguenos en Instagram</strong>
+        </ion-button>
+        <ion-button color="facebook" (click)="openFacebook('HabibiUN', 'https://www.facebook.com/HabibiUN/')">
+          <ion-icon name="logo-facebook"></ion-icon>
+          <strong align="right">Siguenos en Facebook</strong>
+        </ion-button>
+    </ion-card-content>
+    </ion-card>
+
+  </ion-slide>
+
+  <ion-slide>
+    <ion-card>
+      <ion-card-header>
+        <ion-img width="10" height="10" src="assets/4_11_tango.jpg"></ion-img>
+        <ion-card-title>Danza tango</ion-card-title>
+      </ion-card-header>
+
+      <ion-item>
+        <ion-icon name="business-outline"></ion-icon>
+        <ion-label align="center">Facultad: No Adscrito</ion-label>
+      </ion-item>
+
+      <ion-card-content>
+        Aprender a bailar tango sin necesidad de haber bailado antes es una de las cualidades del trabajo de este grupo. El énfasis en la escucha del otro mientras se baila en pareja genera conexiones únicas y muy reales, mediante el movimiento y la comunicación no verbal, basada en la idea de estar presente y activo, escuchar las propias sensaciones y lo que la música transmite a cada uno.
+      </ion-card-content>
+      <ion-card-content>
+        <ion-button color="success" (click)="openUrl('http://bienestar.bogota.unal.edu.co/cultura.php')">Mas información</ion-button>
+    </ion-card-content>
+    </ion-card>
+
+  </ion-slide>
+
+  <ion-slide>
+    <ion-card>
+      <ion-card-header>
+        <ion-img width="10" height="10" src="assets/4_12_tuna.jpg"></ion-img>
+        <ion-card-title>Tuna Universitaria</ion-card-title>
+      </ion-card-header>
+
+      <ion-item>
+        <ion-icon name="business-outline"></ion-icon>
+        <ion-label align="center">Facultad: No Adscrito</ion-label>
+      </ion-item>          
+      <ion-item>
+        <ion-icon name="logo-instagram"></ion-icon> 
+        <ion-label align="center">@tunosnachos</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="logo-facebook"></ion-icon> 
+        <ion-label align="center">Tuna Universitaria de la Universidad Nacional de Colombia</ion-label>
+      </ion-item>
+
+      <ion-card-content>
+        La Tuna es una agrupación musical universitaria de carácter cultural que integra la academia con la música, retomando una tradición creada desde el siglo XIII: la Tuna como escuela de vida, palestra de ingenios y urdidora de ensueños. Los estudiantes cantores y cantoras interpretan un variado repertorio acompañados de instrumentos de cuerda como el laúd, la bandurria, la guitarra, el contrabajo, el cuatro y la pandereta, entre otros. La pandereta es un símbolo de la tuna y su baile un arte que combina agilidad y buen sentido del ritmo.
+      </ion-card-content>
+      <ion-card-content>
+        <ion-button color="success" (click)="openUrl('http://bienestar.bogota.unal.edu.co/ver_noticia.php?id_noticia=560')">Noticia</ion-button>
+        <ion-button color="success" (click)="openUrl('http://bienestar.bogota.unal.edu.co/cultura.php')">Mas información</ion-button>
+        <ion-button fill="clear" color="white" style="background-image:url('assets/instagram.png'); background-size:cover" (click)="openInstagram('tunosnachos', 'https://www.instagram.com/tunosnachos/')">
+          <ion-icon name="logo-instagram"></ion-icon>
+          <strong align="right">Siguenos en Instagram</strong>
+        </ion-button>
+        <ion-button color="facebook" (click)="openFacebook('TunaUnivUNALC', 'https://www.facebook.com/TunaUnivUNALC/')">
+          <ion-icon name="logo-facebook"></ion-icon>
+          <strong align="right">Siguenos en Facebook</strong>
+        </ion-button>
+    </ion-card-content>
+    </ion-card>
+
+  </ion-slide>
+
+  <ion-slide>
+    <ion-card>
+      <ion-card-header>
+        <ion-img width="10" height="10" src="assets/4_13_salsa.jpg"></ion-img>
+        <ion-card-title>Danza Salsa</ion-card-title>
+      </ion-card-header>
+
+      <ion-item>
+        <ion-icon name="business-outline"></ion-icon>
+        <ion-label align="center">Facultad: No Adscrito</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="logo-facebook"></ion-icon> 
+        <ion-label align="center">Salsa UN SalsUN</ion-label>
+      </ion-item>
+
+      <ion-card-content>
+        Las prácticas de este grupo están basadas en el trabajo colectivo donde el estudio de los elementos técnicos de la danza salsa se manifiesta en un ambiente de compromiso, escucha, apoyo, respeto y relaciones de afecto entre sus integrantes que permite mejorar su expresividad corporal y la comunicación personal y social. La responsabilidad y organización de los espacios de clase se extiende, según sus integrantes, a otros espacios académicos y personales; así mismo, su percepción de la vida universitaria se amplía con esta práctica y los espacios valiosos para su formación integral se ven más influenciados por el desarrollo del pensamiento creativo
+      </ion-card-content>
+      <ion-card-content>
+        <ion-button color="success" (click)="openUrl('http://bienestar.bogota.unal.edu.co/cultura.php')">Mas información</ion-button>
+        <ion-button color="facebook" (click)="openFacebook('salsaUNsalsUN', 'https://www.facebook.com/salsaUNsalsUN/')">
+          <ion-icon name="logo-facebook"></ion-icon>
+          <strong align="right">Siguenos en Facebook</strong>
+        </ion-button>
+    </ion-card-content>
+    </ion-card>
+
+  </ion-slide>
+
+  <ion-slide>
+    <ion-card>
+      <ion-card-header>
+        <ion-img width="10" height="10" src="assets/4_14_ensamble.jpg"></ion-img>
+        <ion-card-title>Ensamble músico vocal</ion-card-title>
+      </ion-card-header>
+
+      <ion-item>
+        <ion-icon name="business-outline"></ion-icon>
+        <ion-label align="center">Facultad: No Adscrito</ion-label>
+      </ion-item>
+
+      <ion-card-content>
+        Comunicarse a través del lenguaje de la música es para sus integrantes una posibilidad de aprender en relación con otros, mientras cada uno desarrolla o avanza en sus habilidades musicales. En este sentido, el ensamble conforma para ellos un tejido social que sólo funciona por el trabajo colectivo –aprendiendo a escucharse y escuchando a otros–, para el cual sus integrantes realizan un entrenamiento auditivo y vocal, y preparan repertorios de varios géneros musicales (pop, música latinoamericana, jazz vocal, coral...). Los lenguajes diferentes de sus integrantes se encuentran en este espacio, creando relaciones invaluables de amistad, respeto y compañerismo
+      </ion-card-content>
+      <ion-card-content>
+        <ion-button color="success" (click)="openUrl('http://bienestar.bogota.unal.edu.co/cultura.php')">Mas información</ion-button>
+    </ion-card-content>
+    </ion-card>
+
+  </ion-slide>
+
+  <ion-slide>
+    <ion-card>
+      <ion-card-header>
+        <ion-img width="10" height="10" src="assets/4_15_rock.jpg"></ion-img>
+        <ion-card-title>Banda de Rock y Pop</ion-card-title>
+      </ion-card-header>
+
+      <ion-item>
+        <ion-icon name="business-outline"></ion-icon>
+        <ion-label align="center">Facultad: No Adscrito</ion-label>
+      </ion-item>
+
+      <ion-card-content>
+        El grupo brinda un espacio de ‘convivencia musical’ de alto nivel, paralelo a los espacios académicos de la Universidad, que está abierto a explorar los talentos previos de sus integrantes y a generar prácticas para desarrollar sus cualidades artísticas, al profundizar en el estudio de instrumentos y mejorar en sus habilidades musicales por medio de la preparación individual de temas, el proceso de ensamble y el refuerzo realizado por el profesor acerca del proceso de aprendizaje.
+      </ion-card-content>
+      <ion-card-content>
+        <ion-button color="success" (click)="openUrl('http://bienestar.bogota.unal.edu.co/cultura.php')">Mas información</ion-button>
+    </ion-card-content>
+    </ion-card>
+
+  </ion-slide>
+
+  <ion-slide>
+    <ion-card>
+      <ion-card-header>
+        <ion-img width="10" height="10" src="assets/4_16_stomp.jpg"></ion-img>
+        <ion-card-title>STOMP</ion-card-title>
+      </ion-card-header>
+
+      <ion-item>
+        <ion-icon name="business-outline"></ion-icon>
+        <ion-label align="center">Facultad: No Adscrito</ion-label>
+      </ion-item>          
+      <ion-item>
+        <ion-icon name="logo-instagram"></ion-icon> 
+        <ion-label align="center">@stomp.un</ion-label>
+      </ion-item>
+
+      <ion-card-content>
+        Pertenecer a este grupo es una experiencia novedosa y única para sus integrantes. Abordar ritmos del folclor suramericano –como samba brasilera, rock, merengue, pop, salsa, tecno– desde la percusión creada con objetos no convencionales y material de reciclaje les ha permitido relacionarse con la música de otra manera: desde el taller de elaboración de instrumentos, desde una mirada que resignifica los elementos del entorno a partir de un acercamiento sonoro, desde la posibilidad de crear colectivamente a partir de la exploración de estructuras rítmicas, y desde el goce por la música que integra una formación auditiva, motriz y técnica.
+      </ion-card-content>
+      <ion-card-content>
+        <ion-button color="success" (click)="openUrl('http://bienestar.bogota.unal.edu.co/cultura.php')">Mas información</ion-button>
+        <ion-button fill="clear" color="white" style="background-image:url('assets/instagram.png'); background-size:cover" (click)="openInstagram('stomp.un', 'https://www.instagram.com/stomp.un/')">
+          <ion-icon name="logo-instagram"></ion-icon>
+          <strong align="right">Siguenos en Instagram</strong>
+        </ion-button>
+    </ion-card-content>
+    </ion-card>
+
+  </ion-slide>
+
+  <ion-slide>
+    <ion-card>
+      <ion-card-header>
+        <ion-img width="10" height="10" src="assets/4_17_zancos.jpg"></ion-img>
+        <ion-card-title>Zancos teatro</ion-card-title>
+      </ion-card-header>
+
+      <ion-item>
+        <ion-icon name="business-outline"></ion-icon>
+        <ion-label align="center">Facultad: No Adscrito</ion-label>
+      </ion-item>
+
+      <ion-card-content>
+        En esta agrupación se desarrollan procesos de forma - ción y creación en el ámbito de las artes circenses con especial énfasis en la práctica zanquera, en los que se profundiza en el entrenamiento técnico y en la creación y ejecución de obras escénicas en espacios abiertos, articulando herramientas del teatro callejero, actos circenses, acrobacia, danza, música y coreografía. Así mismo, busca fomentar que la comunidad universitaria (estudiantes, docentes, administrativos) se apropie de los espacios abiertos, a través de esta práctica artística, y tiene un componente social importante por la comuni - cación que logra establecer con comunidades distintas.
+      </ion-card-content>
+      <ion-card-content>
+        <ion-button color="success" (click)="openUrl('http://bienestar.bogota.unal.edu.co/cultura.php')">Mas información</ion-button>
+    </ion-card-content>
+    </ion-card>
+
+  </ion-slide>
+
+</ion-slides>
+
+
+</ion-content>

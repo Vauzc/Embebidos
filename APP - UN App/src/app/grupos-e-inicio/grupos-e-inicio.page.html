@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-button fill="clear" slot="start" routerLink="/Grupos">
+      <ion-icon name="return-down-back" color=white></ion-icon>
+    </ion-button>
+    <ion-title align="center">
+      Grupos estudiantiles 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<br>
+<br>
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-card color="acad"  style="width: 145px; height: 200px;" button=true routerLink="/g-acad">
+        <ion-card-content>
+          <ion-img src="assets/Imagenes/Academico.png"></ion-img>
+          <ion-card-subtitle style="font-size:19px" class= "esp2" >
+            <br> Académicos
+          </ion-card-subtitle>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col>
+      <ion-card color="sport"  style="width: 145px; height: 200px;" button=true routerLink="/g-dep">
+        <ion-card-content>
+          <ion-img src="assets/Imagenes/Deportes.png"></ion-img>
+          <ion-card-subtitle style="font-size:19px" class= "esp2">
+            <br> Deportes
+          </ion-card-subtitle>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+</ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-card color="white" style="width: 145px; height: 200px;" button=true routerLink="/g-otros">
+        <ion-card-content>
+          <ion-img src="assets/Imagenes/Otros.jpg"></ion-img>
+          <ion-card-subtitle style="font-size:19px" class= "esp2">
+            <br> Otros
+          </ion-card-subtitle>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col>
+      <ion-card color="dark" style="width: 145px; height: 200px;" button=true routerLink="/g-gai">
+        <ion-card-content>
+          <ion-img src="assets/Imagenes/gai.png"></ion-img>
+          <ion-card-subtitle style="font-size:19px" class= "esp2">
+             Artísticos (GAI)
+          </ion-card-subtitle>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+
+
+</ion-grid>
+ 
+
+</ion-content>

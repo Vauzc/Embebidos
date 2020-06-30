@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-button fill="clear" slot="start" routerLink="/tab2">
+      <ion-icon name="return-down-back" color=white></ion-icon>
+    </ion-button>
+    <ion-title>
+      Noticias
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card  class="cartas_ini">
+    <ion-card-header color="mio">
+      <ion-card-title>Noticias de la Universidad</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-card  button=true (click)="openUrl('https://agenciadenoticias.unal.edu.co/')">
+        <ion-card-content>
+          <ion-img src="assets/Imagenes/anotun.jpg"></ion-img>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card color="white"  button=true (click)="openUrl('https://unperiodico.unal.edu.co/')">
+        <ion-card-content>
+          <ion-img src="assets/Imagenes/periodico.png"></ion-img>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card  button=true (click)="openUrl('http://unradio.unal.edu.co/')">
+        <ion-card-content>
+          <ion-img src="assets/Imagenes/radio.png"></ion-img>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card color="white"  button=true (click)="openUrl('http://untelevision.unal.edu.co/')">
+        <ion-card-content>
+          <ion-img src="assets/NotEve/untelevision.svg"></ion-img>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card color="white" button=true (click)="openUrl('http://metacampus.unal.edu.co/')">
+        <ion-card-content>
+          <ion-img src="assets/NotEve/metacampus.svg"></ion-img>
+        </ion-card-content>
+      </ion-card>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="cartas_ini">
+      <ion-card-header color="secondary">
+        <ion-card-title>¿Interesado en eventos?</ion-card-title>
+      </ion-card-header>
+    
+    <ion-card-content class="upper" >
+      <ion-slides pager="false" [options]="slideOptsOne" #slideWithNav
+        (ionSlideDidChange)="SlideDidChange(sliderOne,slideWithNav)">
+        <ion-slide>
+          <ion-card color="white" style="width: 220px; height: 230px;" button=true (click)="openUrl('https://bogota.unal.edu.co/circular-un-bogota/' )">
+            <ion-card-content>
+              <ion-img src="assets/Imagenes/semanal.jpg"></ion-img>
+              <ion-card-subtitle style="font-size:19px">
+               <br> Eventos Semanales
+              </ion-card-subtitle>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+        <ion-slide>
+          <ion-card color="acad" style="width: 220px; height: 230px;" button=true (click)="openUrl('https://bogota.unal.edu.co/noticias/eventos-academicos/' )">
+            <ion-card-content>
+              <ion-img src="assets/Imagenes/Academico.png"></ion-img>
+              <ion-card-subtitle style="font-size:19px">
+                Eventos Académicos
+              </ion-card-subtitle>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+        <ion-slide>
+          <ion-card color="dark" style="width: 220px; height: 230px;" button=true (click)="openUrl('http://patrimoniocultural.bogota.unal.edu.co/' )">
+            <ion-card-content>
+              <ion-img src="assets/Imagenes/gai.png"></ion-img>
+              <ion-card-subtitle style="font-size:19px">
+                Patrimonio cultural
+              </ion-card-subtitle>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+      </ion-slides>
+  
+    </ion-card-content>
+</ion-card>
+ </ion-content>

@@ -1,0 +1,92 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-button fill="clear" slot="start" routerLink="/tab2">
+      <ion-icon name="return-down-back" color=white></ion-icon>
+    </ion-button>
+    <ion-title>
+      Convocatorias
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content [fullscreen]="true">
+  <ng-container *ngIf="validar(Convocatorias)">
+    <ng-container *ngFor="let con of Convocatorias">
+      <ion-item lines="none">
+        <ion-card class="cartas_ini">
+          <ion-card-header>
+            <p align="center" style="font-size:20px"  color="mio" *ngIf="validar(con[5])">{{con[5]}}</p>
+          </ion-card-header>
+          <ion-item *ngIf="validar(con[0])">
+            <ion-icon name="key-outline"></ion-icon>
+            <ion-label style="font-size:15px">Codigo: {{con[0]}}</ion-label>
+          </ion-item>
+          <ion-item *ngIf="validar(con[2])">
+            <ion-icon name="list-outline"></ion-icon>
+            <ion-label style="font-size:15px">Modalidad: {{con[2]}}</ion-label>
+          </ion-item>
+          <ion-item *ngIf="validar(con[3])">
+            <ion-icon name="paper-plane-outline"></ion-icon>
+            <ion-label style="font-size:15px">Dirigido a: {{con[3]}}</ion-label>
+          </ion-item>
+          <ion-item *ngIf="validar(con[4])">
+            <ion-icon name="create-outline"></ion-icon>
+            <ion-label style="font-size:15px">Tipo: {{con[4]}}</ion-label>
+          </ion-item>
+          <ion-item *ngIf="validar(con[6])">
+            <ion-icon name="people-outline"></ion-icon>
+            <ion-label style="font-size:15px">Estudiantes requeridos: {{con[6]}}</ion-label>
+          </ion-item>
+          <ion-item *ngIf="validar(con[7])">
+            <ion-icon name="alarm-outline"></ion-icon>
+            <ion-label style="font-size:15px">Horas: {{con[7]}}</ion-label>
+          </ion-item>
+          <ion-item *ngIf="validar(con[8])">
+            <ion-icon name="cash-outline"></ion-icon>
+            <ion-label style="font-size:15px">Pago: {{con[8]}}</ion-label>
+          </ion-item>
+        </ion-card>
+      </ion-item>
+    </ng-container>
+  </ng-container>
+
+  <ion-item lines="none" class="esp2" *ngIf="!validar(Convocatorias)">
+    <ion-img src="assets/Imagenes/Noparati.jpg"></ion-img>
+  </ion-item>
+  <ion-item lines="none" *ngIf="!validar(Convocatorias)">
+    <ion-text class="esp2">
+      <h2> No hay convocatorias para ti</h2>
+    </ion-text>
+  </ion-item>
+  
+  <p align="center" color="dark" style="font-size:20px">Mas información en:</p>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card color="primary"  style="width: 145px; height: 200px;" button=true (click)="openUrl('http://www.dre.unal.edu.co/nc/convocatorias.html')">
+          <ion-card-content>
+            <br><br><br>
+            <ion-img src="assets/Imagenes/Dre.jpg"></ion-img>
+            <ion-card-subtitle style="font-size:19px"class= "esp2" >
+              <br> DRE
+            </ion-card-subtitle>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card color="white"  style="width: 145px; height: 200px;" button=true (click)="openUrl('https://bogota.unal.edu.co/convocatorias/')">
+          <ion-card-content>
+            <ion-img src="assets/Imagenes/unal.jpg"></ion-img>
+            <ion-card-subtitle style="font-size:19px" class= "esp2"> 
+              <br> Sede Bogotá
+            </ion-card-subtitle>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+  </ion-row>
+  </ion-grid>
+
+</ion-content>

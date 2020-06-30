@@ -1,0 +1,208 @@
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4" size-sm>
+        <ion-fab vertical="top" horizontal="start">
+          <ion-menu-toggle>
+            <ion-fab-button color="white" (click)="openCustom()">
+              <ion-icon name="menu" color="primary"></ion-icon>
+            </ion-fab-button>
+          </ion-menu-toggle>
+        </ion-fab>
+      </ion-col>
+      <ion-col>
+        <br>
+        <ion-img src="assets/Imagenes/Inicio_negro.png"></ion-img>
+      </ion-col>
+      <ion-col size="2" size-sm>
+        
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+  <ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    
+      <ion-item class="ion-activated" *ngFor="let item of listado" routerLink="/perfil">
+        <ion-icon name="{{item.icono}}" slot="start"></ion-icon>
+        <ion-label align="center">{{item.nombre}}</ion-label>
+      </ion-item>
+      <ion-item class="ion-activated" *ngFor="let item of listado2" routerLink="/Tutorias">
+        <ion-icon name="{{item.icono}}" slot="start"></ion-icon>
+        <ion-label align="center">{{item.nombre}}</ion-label>
+      </ion-item>
+      <ion-item class="ion-activated" *ngFor="let item of listado3" button=true routerLink="/Grupos">
+        <!--  Unico con cambio en route -->
+        <ion-icon name="{{item.icono}}" slot="start"></ion-icon>
+        <ion-label align="center">{{item.nombre}}</ion-label>
+      </ion-item>
+      <ion-item class="ion-activated" *ngFor="let item of listado4" routerLink="/Convocatorias">
+        <ion-icon name="{{item.icono}}" slot="start"></ion-icon>
+        <ion-label align="center">{{item.nombre}}</ion-label>
+      </ion-item>
+      <ion-item class="ion-activated" *ngFor="let item of listado6" routerLink="/Maestrias">
+        <ion-icon name="{{item.icono}}" slot="start"></ion-icon>
+        <ion-label align="center">{{item.nombre}}</ion-label>
+      </ion-item>
+      <ion-item class="ion-activated" *ngFor="let item of listado7" routerLink="/Pasantias">
+        <ion-icon name="{{item.icono}}" slot="start"></ion-icon>
+        <ion-label align="center">{{item.nombre}}</ion-label>
+      </ion-item>
+
+      <ion-item class="ion-activated" *ngFor="let item of listado8" routerLink="/Noticias">
+        <ion-icon name="{{item.icono}}" slot="start"></ion-icon>
+        <ion-label align="center">{{item.nombre}}</ion-label>
+      </ion-item>
+
+      <ion-item class="ion-activated" *ngFor="let item of listado9" routerLink="/AboutTheApp">
+        <ion-icon name="{{item.icono}}" slot="start"></ion-icon>
+        <ion-label align="center">{{item.nombre}}</ion-label>
+      </ion-item>
+
+      <ion-item class="ion-activated" *ngFor="let item of listado9" (click)="salir()">
+        <ion-icon name="close-outline" slot="start"></ion-icon> 
+        <ion-label align="center">Cerrar sesión</ion-label>
+      </ion-item>
+
+    
+
+  </ion-menu>
+
+  <ion-router-outlet id="main"></ion-router-outlet>
+
+  <ion-card color="mio" class="cartas_ini" routerLink="/tab1">
+    <ion-card-header>
+      <ion-card-title>Próximo grupo de estudio:</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content *ngIf="GEA() == 'No'">
+      <ion-item color="mio" lines="none" class="esp">
+        <ion-label class="ion-text-wrap">
+          <ion-text style="font-size:14px">
+            No tienes grupos para hoy ¿Quieres crear uno?
+          </ion-text>
+        </ion-label>
+        <ion-icon slot="end" name="caret-forward-circle-outline"></ion-icon>
+      </ion-item>
+    </ion-card-content>
+    <ion-card-content *ngIf="GEA() != 'No'">
+      <ion-item color="mio" lines="none" class="esp">
+        <ion-label class="ion-text-wrap">
+          <ion-text style="font-size:17px">
+            {{GEA()[0]}}
+          </ion-text>
+          <br>
+          <ion-text style="font-size:16px">
+            ({{GEA()[1]}} - {{GEA()[2]}})
+          </ion-text>
+          <br>
+          <ion-text style="font-size:16px">
+            Lugar: {{GEA()[3]}} 
+          </ion-text>
+        </ion-label>
+        <ion-icon name="alarm-outline"> </ion-icon>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color="secondary" class="cartas_ini" button=true routerLink="/tabReservaMesas">
+    <ion-card-header>
+      <ion-card-title>Próxima mesa reservada</ion-card-title>
+    </ion-card-header>
+    <ion-card-content *ngIf="Mesasreservadas() == 'No tienes mesas reservadas para hoy'">
+      <ion-item color="secondary" lines="none" class="esp">
+        <ion-label class="ion-text-wrap">
+          <ion-text style="font-size:14px">
+            No tienes reservas para hoy ¿Quieres realizar una?
+          </ion-text>
+        </ion-label>
+        <ion-icon slot="end" name="caret-forward-circle-outline"></ion-icon>
+      </ion-item>
+    </ion-card-content>
+    <ion-card-content *ngIf="Mesasreservadas() != 'No tienes mesas reservadas para hoy'">
+      <ion-item color="secondary" lines="none" class="esp">
+        <ion-label class="ion-text-wrap">
+          <ion-text style="font-size:17px">
+             Mesa {{Mesasreservadas()[0]}} ({{Mesasreservadas()[1]}} - {{Mesasreservadas()[2]}})
+          </ion-text>
+        </ion-label>
+        <ion-icon name="alarm-outline"> </ion-icon>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-card class="cartas_ini" color="primary" button=true routerLink="/tab1">
+    <ion-card-header>
+      <ion-item color="primary" lines="none" class="esp2">
+      <ion-card-title >Explorar otros grupos de estudio</ion-card-title><ion-icon name="search"></ion-icon></ion-item>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card color="tertiary" class="cartas_ini" button=true routerLink="/Grupos">
+    <ion-card-header>
+      <ion-card-title>Grupos</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+  <ion-card-content class="upper">
+    <ion-slides pager="false" [options]="slideOptsOne" #slideWithNav
+      (ionSlideDidChange)="SlideDidChange(sliderOne,slideWithNav)">
+      <ion-slide>
+        <ion-card color="acad" style="width: 220px; height: 230px;" button=true routerLink="/g-acad">
+          <ion-card-content>
+            <ion-img src="assets/Imagenes/Academico.png"></ion-img>
+            <ion-card-subtitle style="font-size:19px">
+              Académicos
+            </ion-card-subtitle>
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card color="sport" style="width: 220px; height: 230px;" button=true routerLink="/g-dep">
+          <ion-card-content>
+            <ion-img src="assets/Imagenes/Deportes.png"></ion-img>
+            <ion-card-subtitle style="font-size:19px">
+              Deportivos
+            </ion-card-subtitle>
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card color="white" style="width: 220px; height: 230px;" button=true routerLink="/g-otros">
+          <ion-card-content>
+            <ion-img src="assets/Imagenes/Otros.jpg"></ion-img>
+            <ion-card-subtitle style="font-size:19px">
+              Otros
+            </ion-card-subtitle>
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card color="dark" style="width: 220px; height: 230px;" button=true routerLink="/g-gai">
+          <ion-card-content>
+            <ion-img src="assets/Imagenes/gai.png"></ion-img>
+            <ion-card-subtitle style="font-size:19px">
+              Artísticos (GAI)
+            </ion-card-subtitle>
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card color="white" style="width: 220px; height: 230px;" button=true routerLink="/GruposU">
+          <ion-card-content>
+            <ion-img src="assets/Imagenes/institucional.jpg"></ion-img>
+            <ion-card-subtitle style="font-size:19px">
+              Institucionales
+            </ion-card-subtitle>
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+
+  </ion-card-content>
+
+</ion-content>

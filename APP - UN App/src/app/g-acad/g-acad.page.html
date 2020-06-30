@@ -1,0 +1,803 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-button fill="clear" slot="start" routerLink="/grupos-e-inicio">
+      <ion-icon name="return-down-back" color=white></ion-icon>
+    </ion-button>
+    <ion-title align="center">
+      Grupos Académicos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides pager="true" [options]="slideOpts" color="medium">
+    
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img width="10" height="10" src="assets/3_3_protos.jpg"></ion-img>
+          <ion-card-title>Grupo ProtosUN</ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon>
+          <ion-label align="center">Facultad: Ingeniería</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="mail-outline"></ion-icon>
+          <ion-label align="center">protosun_bog@unal.edu.co</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-instagram"></ion-icon>
+          <ion-label align="center">@protosunal</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          Buscamos encontrar solución a problemas de medicina reales mediante ingeniería
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button fill="clear" color="white"
+            style="background-image:url('assets/instagram.png'); background-size:cover"
+            (click)="openInstagram('protosunal', 'https://www.instagram.com/protosunal/')">
+            <ion-icon name="logo-instagram"></ion-icon>
+            <strong align="right">Siguenos en Instagram</strong>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-slide>
+    
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img width="10" height="10" src="assets/3_1_etno.jpg"></ion-img>
+          <ion-card-title>Grupo de Investigación MUI</ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon> 
+          <ion-label align="center">Facultad: Ciencias</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-instagram"></ion-icon>
+          <ion-label align="center">@guiasetnobiologicascol</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          Grupo de Investigación para desarrollar proyectos etnobiológicos en Colombia
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button fill="clear" color="white"
+            style="background-image:url('assets/instagram.png'); background-size:cover"
+            (click)="openInstagram('guiasetnobiologicascol', 'https://www.instagram.com/guiasetnobiologicascol/')">
+            <ion-icon name="logo-instagram"></ion-icon>
+            <strong align="right">Siguenos en Instagram</strong>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img width="10" height="10" src="assets/3_2_kart.png"></ion-img>
+          <ion-card-title>Grupo KartUN</ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon>
+          <ion-label align="center">Facultad: Ingeniería</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="mail-outline"></ion-icon>
+          <ion-label align="center">kartun_fibog@unal.edu.co</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-instagram"></ion-icon>
+          <ion-label align="center">@kartun_grupo</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-label align="center">KartUN</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          Grupo enfocado al desarrollo y aplicación de la ingeniería automotriz utilizando los vehículos tipo kart de la
+          UN
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button fill="clear" color="white"
+            style="background-image:url('assets/instagram.png'); background-size:cover"
+            (click)="openInstagram('kartun_grupo', 'https://www.instagram.com/kartun_grupo/')">
+            <ion-icon name="logo-instagram"></ion-icon>
+            <strong align="right">Siguenos en Instagram</strong>
+          </ion-button>
+          <ion-button color="facebook" (click)="openFacebook('Grupokartun', 'https://www.facebook.com/Grupokartun/')">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <strong align="right">Siguenos en Facebook</strong>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-slide>
+
+
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img width="10" height="10" src="assets/3_4_vitruvio.jpg"></ion-img>
+          <ion-card-title>Vitruvio Anatomía Clínica y Quirúrgica </ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon>
+          <ion-label align="center">Facultad: Medicina</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-instagram"></ion-icon>
+          <ion-label align="center">@vitruvioanatomia</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-label align="center">Vitruvio - Anatomía Clínica y Quirúrgica</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          Se divide en grupos de profundización en neuro, en cirugía general y en ortopedia, que hacen charlas para
+          revisión de temas. Hay otro grupo de promoción y prevención donde hacen campañas de salud pública.
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button fill="clear" color="white"
+            style="background-image:url('assets/instagram.png'); background-size:cover"
+            (click)="openInstagram('vitruvioanatomia', 'https://www.instagram.com/vitruvioanatomia/')">
+            <ion-icon name="logo-instagram"></ion-icon>
+            <strong align="right">Siguenos en Instagram</strong>
+          </ion-button>
+          <ion-button color="facebook" (click)="openFacebook('VitruvioAC', 'https://www.facebook.com/VitruvioAC/')">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <strong align="right">Siguenos en Facebook</strong>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img width="10" height="10" src="assets/3_5_PIG.jpg"></ion-img>
+          <ion-card-title>PIG</ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon>
+          <ion-label align="center">Facultad: Medicina</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-instagram"></ion-icon>
+          <ion-label align="center">@somospig</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-label align="center">PIG - Grupo de Interés en Pediatría</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          Grupo de interés en pediatría. Se hacen conferencias y revisiones de tema.
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button fill="clear" color="white"
+            style="background-image:url('assets/instagram.png'); background-size:cover"
+            (click)="openInstagram('somospig', 'https://www.instagram.com/somospig/')">
+            <ion-icon name="logo-instagram"></ion-icon>
+            <strong align="right">Siguenos en Instagram</strong>
+          </ion-button>
+          <ion-button color="facebook" (click)="openFacebook('somospig', 'https://www.facebook.com/somospig/')">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <strong align="right">Siguenos en Facebook</strong>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img width="10" height="10" src="assets/3_6_prog.jpg"></ion-img>
+          <ion-card-title>Programación competitiva</ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon>
+          <ion-label align="center">Facultad: Ingeniería</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-label align="center">Programación Competitiva Universidad Nacional de Colombia</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          La programación competitiva es una disciplina que trata de la resolución de problemas algorítmicos y lógicos
+          por medio del uso de un lenguaje de programación donde el reto es resolver la mayor cantidad de problemas en
+          el menor tiempo posible optimizando recursos de la maquina.
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button color="success">https://sites.google.com/view/programacion-unal/quiénes-somos?authuser=0
+          </ion-button>
+          <ion-button color="facebook"
+            (click)="openFacebook('groups/maratonesunbogota', 'https://m.facebook.com/groups/maratonesunbogota')">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <strong align="right">Siguenos en Facebook</strong>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img width="10" height="10" src="assets/3_7_onunal.jpg"></ion-img>
+          <ion-card-title>ONUNAL</ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon>
+          <ion-label align="center">Facultad: No Adscrito</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-instagram"></ion-icon>
+          <ion-label align="center">@onunalun</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-label align="center">ONUNAL</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          En primer lugar, es pertinente ofrecer una definición de lo que son los Modelos de Naciones Unidas, entre
+          tantas que pueden ser dadas de manera acertada; podemos decir que este tipo de eventos constituyen escenarios
+          de debate y construcción de propuestas frente a temas de la agenda global y que han tomado fuerza en el país
+          como herramienta pedagógica y metodológica para el desarrollo de habilidades de investigación, redacción y
+          oratoria en sus participantes.
+          ONUNAL es una forma de tratar temas económicos, sociales, políticos y sobre el Derecho Internacional desde el
+          ámbito académico entendiendo la perspectiva adoptada por Naciones Unidas y partiendo de los parámetros
+          utilizados para la resolución de conflictos, abriendo espacios para pensar en soluciones alternas; apropiarse
+          de las dinámicas de organismos internacionales como Naciones Unidas, y de este modo visualizar los problemas
+          como propios y adoptar posturas diferentes frente a los mismos.
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button fill="clear" color="white"
+            style="background-image:url('assets/instagram.png'); background-size:cover"
+            (click)="openInstagram('onunalun', 'https://www.instagram.com/onunalun/')">
+            <ion-icon name="logo-instagram"></ion-icon>
+            <strong align="right">Siguenos en Instagram</strong>
+          </ion-button>
+          <ion-button color="facebook"
+            (click)="openFacebook('NacionesUnidasUNAL', 'https://www.facebook.com/NacionesUnidasUNAL/')">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <strong align="right">Siguenos en Facebook</strong>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img width="10" height="10" src="assets/3_8_ceimtun.jpg"></ion-img>
+          <ion-card-title>Ceimtun-RAS </ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon>
+          <ion-label align="center">Facultad: Ingeniería</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="mail-outline"></ion-icon>
+          <ion-label align="center">ceimtun@unal.edu.co</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-instagram"></ion-icon>
+          <ion-label align="center">@ceimtun</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-label align="center">Pagina: UNRobot</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-label align="center">Persona: Rob Unal</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-twitter"></ion-icon>
+          <ion-label align="center">@ceimtun</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          Comité de estudiantes de ingeniería mecatrónica y el capítulo de Robótica y Automatización de la rama IEEE.
+          Somos organizadores del concurso gratuito de robótica UNRobot y de distintos talleres relacionados a la
+          enseñanza de temáticas relacionadas con el desarrollo de robots (como por ejemplo, talleres de arduino).
+          Además, realizamos diferentes proyectos de aplicación de robótica en los que se incluyen robots de competencia
+          (minisumo, seguidor de línea) y proyectos de innovación. Aceptamos miembros de todas las carreras con interés
+          en la robótica y automatización.
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button color="success" (click)="openUrl('https://ingenieria.bogota.unal.edu.co/ceimtun/')">Mas
+            información</ion-button>
+          <ion-button fill="clear" color="white"
+            style="background-image:url('assets/instagram.png'); background-size:cover"
+            (click)="openInstagram('ceimtun', 'https://www.instagram.com/ceimtun/')">
+            <ion-icon name="logo-instagram"></ion-icon>
+            <strong align="right">Siguenos en Instagram</strong>
+          </ion-button>
+          <ion-button color="facebook" (click)="openFacebook('UNRobot.UNAL', 'https://www.facebook.com/UNRobot.UNAL/')">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <strong align="right">Siguenos en Facebook</strong>
+          </ion-button>
+          <ion-button color="facebook" (click)="openFacebook('ceimtun', 'https://www.facebook.com/ceimtun')">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <strong align="right">Siguenos en Facebook</strong>
+          </ion-button>
+          <ion-button color="twitter" (click)="openTwitter('ceimtun', 'https://twitter.com/ceimtun')">
+            <ion-icon name="logo-twitter"></ion-icon>
+            <strong align="right">Siguenos en Twitter</strong>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img width="10" height="10" src="assets/3_9_emb.jpg"></ion-img>
+          <ion-card-title>EMB-BioMed School UN</ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon>
+          <ion-label align="center">Facultad: Ciencias e Ingeniería</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="mail-outline"></ion-icon>
+          <ion-label align="center">emb_fibog@unal.edu.co</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-label align="center">EMBs - Universidad Nacional de Colombia</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          Grupo estudiantil y capítulo estudiantil de la sociedad de Ingeniería en Medicina y Biología con tres
+          objetivos principales: formación, divulgación e investigación en temáticas variadas de bioingeniería. Contamos
+          con estudiantes de Biología, Ingeniería Química, Mecánica, Mecatrónica, Eléctrica, Electrónica, Sistemas, etc.
+          Nuestro proyecto principal es el desarrollo de una escuela de formación entre febrero y noviembre donde le
+          damos a los estudiantes un recorrido por las diversas aplicaciones de la bioingeniería y apoyamos en la
+          segunda mitad del año el desarrollo de proyectos interdisciplinarios de acuerdo a intereses comunes
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button color="success" (click)="openUrl('http://escueladeformacionemb.tk/')">Info 1</ion-button>
+          <ion-button color="success" (click)="openUrl('https://edu.ieee.org/co-unemb/')">Info 2</ion-button>
+          <ion-button color="facebook" (click)="openFacebook('EMBIEEEUN', 'https://www.facebook.com/EMBIEEEUN/')">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <strong align="right">Siguenos en Facebook</strong>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img width="10" height="10" src="assets/3_10_xwings.jpg"></ion-img>
+          <ion-card-title>AESS UN</ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon>
+          <ion-label align="center">Facultad: Ingeniería</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-instagram"></ion-icon>
+          <ion-label align="center">@xwingsfpv</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          Grupo estudiantil y capítulo estudiantil afiliado a la rama estudiantil IEEE, afín a temas aeroespaciales,
+          donde todos los estudiantes interesados pueden participar en proyectos como rover agronomos, cohetes, drones
+          de carrera, etc.
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button fill="clear" color="white"
+            style="background-image:url('assets/instagram.png'); background-size:cover"
+            (click)="openInstagram('xwingsfpv', 'https://www.instagram.com/xwingsfpv/')">
+            <ion-icon name="logo-instagram"></ion-icon>
+            <strong align="right">Siguenos en Instagram</strong>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img width="10" height="10" src="assets/3_11_ieee.png"></ion-img>
+          <ion-card-title>Rama Estudiantil IEEE</ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon>
+          <ion-label align="center">Facultad: Ingeniería</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="mail-outline"></ion-icon>
+          <ion-label align="center">estieee_fibog@unal.edu.co</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-instagram"></ion-icon>
+          <ion-label align="center">@ramaieeeun</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-label align="center">Rama IEEE Universidad Nacional de Colombia sede Bogotá</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-twitter"></ion-icon>
+          <ion-label align="center">@ieeeun</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          Grupo estudiantil y Rama de IEEE de la Sede Bogotá, donde los interesados en la ingeniería pueden aprender
+          diferentes habilidades técnicas y no técnicas útiles para su vida profesional. Cuenta con los capítulos AESS,
+          EMB, Ceimtun-RAS, Computer, EMC, APS, PES, ComSoc, VTS y el grupo de afinidad Wie, quienes trabajan temas
+          aeroespaciales, medicina y biología en la ingeniería, robotica, software, compatibilidad electromagnetica,
+          antenas, comunicaciones, vehículos eléctricos y mujeres en la ingeniería respectivamente.
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button fill="clear" color="white"
+            style="background-image:url('assets/instagram.png'); background-size:cover"
+            (click)="openInstagram('ramaieeeun', 'https://www.instagram.com/ramaieeeun/')">
+            <ion-icon name="logo-instagram"></ion-icon>
+            <strong align="right">Siguenos en Instagram</strong>
+          </ion-button>
+          <ion-button color="facebook" (click)="openFacebook('ieeeunbog', 'https://www.facebook.com/ieeeunbog/')">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <strong align="right">Siguenos en Facebook</strong>
+          </ion-button>
+          <ion-button color="twitter" (click)="openTwitter('ieeeun', 'https://twitter.com/ieeeun')">
+            <ion-icon name="logo-twitter"></ion-icon>
+            <strong align="right">Siguenos en Twitter</strong>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img width="10" height="10" src="assets/3_12_gida.jpg"></ion-img>
+          <ion-card-title>GIDA-UN</ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon>
+          <ion-label align="center">Facultad: Ingeniería</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="mail-outline"></ion-icon>
+          <ion-label align="center">gidafi_bog@unal.edu.co</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-label align="center">GIDA - UN</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          El Grupo de Investigación y Desarrollo Aeroespacial tiene por objetivo la creación y el desarrollo de espacios
+          académicos destinados a la investigación, promoción y divulgación de las diferentes temáticas del campo
+          aeroespacial y las tecnologías asociadas al mismo, con el fin de vincular a miembros de la comunidad
+          universitaria interesados en esta área del conocimiento y llevar así a la Universidad Nacional de Colombia a
+          la vanguardia del desarrollo aeroespacial en el país y la región.
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button color="facebook" (click)="openFacebook('GIDAUN', 'https://www.facebook.com/GIDAUN/')">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <strong align="right">Siguenos en Facebook</strong>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img width="10" height="10" src="assets/3_13_taxbo.jpg"></ion-img>
+          <ion-card-title>Grupo de taxonomía botánica - TAXBOUN</ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon>
+          <ion-label align="center">Facultad: Ciencias</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-instagram"></ion-icon>
+          <ion-label align="center">@taxboun</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-label align="center">Grupo Estudiantil de Taxonomía Botánica UN</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          Se forma a partir de un interés común por la taxonomía botánica y diversidad florística de Colombia, con el
+          fin de crear un espacio de aprendizaje, formación, investigación y divulgación dentro de la universidad.
+          Adicionalmente propone generar un acercamiento académico hacia la diversidad neotropical; así mismo, TAXBOUN
+          busca inculcar sentido de pertenencia e identidad frente a la biodiversidad colombiana rescatando la
+          importancia de la taxonomía y el trabajo de recolección en campo. Esta abierto para estudiantes de la facultad
+          de ciencias o cualquier persona interesada en conocer acerca de la flora del país.
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button fill="clear" color="white"
+            style="background-image:url('assets/instagram.png'); background-size:cover"
+            (click)="openInstagram('taxboun', 'https://www.instagram.com/taxboun/')">
+            <ion-icon name="logo-instagram"></ion-icon>
+            <strong align="right">Siguenos en Instagram</strong>
+          </ion-button>
+          <ion-button color="facebook" (click)="openFacebook('TAXBOUN', 'https://www.facebook.com/TAXBOUN/')">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <strong align="right">Siguenos en Facebook</strong>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img width="10" height="10" src="assets/3_14_geo.jpg"></ion-img>
+          <ion-card-title>Geopolis UN</ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon>
+          <ion-label align="center">Facultad: Ciencias Humanas</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="mail-outline"></ion-icon>
+          <ion-label align="center">geopolis_bog@unal.edu.co</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-instagram"></ion-icon>
+          <ion-label align="center">@geopolisun</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-label align="center">Geopolis Un</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          La disciplina geográfica es poco conocida incluso dentro de la misma universidad, por lo
+          que queremos mostrarla y generar más interés en esta. Además, Geopolis UN busca brindar
+          herramientas a compañeros de otras carreras que estén interesados en todo lo que la
+          geografía les puede aportar. Por otro lado, Geopolis UN quiere visibilizar los proyectos
+          investigativos realizados desde los estudiantes de pregrado de esta carrera, por lo que
+          buscamos generar espacios para que sus investigaciones sean vistas y donde puedan
+          investigar, ya que el mismo grupo quiere generar conocimiento geográfico a través de la
+          investigación. Finalmente, la creación de espacios alternativos es fundamental para
+          aportar a la disciplina, para esto son los concursos que resultan en los espacios de
+          creatividad.
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button fill="clear" color="white"
+            style="background-image:url('assets/instagram.png'); background-size:cover"
+            (click)="openInstagram('geopolisun', 'https://www.instagram.com/geopolisun/')">
+            <ion-icon name="logo-instagram"></ion-icon>
+            <strong align="right">Siguenos en Instagram</strong>
+          </ion-button>
+          <ion-button color="facebook"
+            (click)="openFacebook('Geopolis-Un-1856808011311823', 'https://www.facebook.com/Geopolis-Un-1856808011311823/')">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <strong align="right">Siguenos en Facebook</strong>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img width="10" height="10" src="assets/3_15_gre.jpg"></ion-img>
+          <ion-card-title>Greunal</ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon>
+          <ion-label align="center">Facultad: Ciencias</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-instagram"></ion-icon>
+          <ion-label align="center">@greunal</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-label align="center">Greunal</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          El grupo de restauración ecológica está adscrito al departamento de biología de la sede Bogotá de la
+          Universidad Nacional de Colombia. Sus enfoques principales son la experimentación, la ejecución y enseñanza de
+          las técnicas de restauración ecológica. Greunal ha participado en congresos de restauración y actividades
+          académicas de la difusión de los trabajos de la restauración. El grupo tiene enfoques multidisciplinarios,
+          desde las ramas del derecho, las ciencias sociales y las ciencias naturales greunal busca integrar los
+          conocimientos sobre la restauración, la agroecología y el trabajo con las comunidades como un proceso conjunto
+          para la recuperación de las funciones y estructura de los ecosistemas. El trabajo más destacado del grupo es
+          la parcela experimental en Villa de Leyva donde se realizan experimentaciones y labores de enriquecimiento de
+          especies vegetalesd durante 4 años hasta la fecha.
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button fill="clear" color="white"
+            style="background-image:url('assets/instagram.png'); background-size:cover"
+            (click)="openInstagram('greunal', 'https://www.instagram.com/greunal/')">
+            <ion-icon name="logo-instagram"></ion-icon>
+            <strong align="right">Siguenos en Instagram</strong>
+          </ion-button>
+          <ion-button color="facebook" (click)="openFacebook('greunal', 'https://www.facebook.com/greunal/')">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <strong align="right">Siguenos en Facebook</strong>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img width="10" height="10" src="assets/3_16_imig.png"></ion-img>
+          <ion-card-title>Imig Unal </ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon>
+          <ion-label align="center">Facultad: Medicina</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="mail-outline"></ion-icon>
+          <ion-label align="center">imig_fmbog@unal.edu.co</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-instagram"></ion-icon>
+          <ion-label align="center">@imigunal</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-label align="center">IMIG UNAL</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          El grupo de Interés en Medicina Interna realiza charlas académicas, talleres, concursos y publicaciones, todas
+          en relación a la Medicina general y Medicin Interna
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button fill="clear" color="white"
+            style="background-image:url('assets/instagram.png'); background-size:cover"
+            (click)="openInstagram('imigunal', 'https://www.instagram.com/imigunal/')">
+            <ion-icon name="logo-instagram"></ion-icon>
+            <strong align="right">Siguenos en Instagram</strong>
+          </ion-button>
+          <ion-button color="facebook" (click)="openFacebook('imigunal', 'https://www.facebook.com/imigunal/')">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <strong align="right">Siguenos en Facebook</strong>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img width="10" height="10" src="assets/3_17_raiz.jpg"></ion-img>
+          <ion-card-title>Casa de Semillas Desde La Raíz</ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon>
+          <ion-label align="center">Facultad: Ciencias agrarias</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="mail-outline"></ion-icon>
+          <ion-label align="center">desdelaraiz_un@unal.edu.co</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-instagram"></ion-icon>
+          <ion-label align="center">@desdelaraiz_un</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-twitter"></ion-icon>
+          <ion-label align="center">@DLR_UN</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          Grupo estudiantil que busca posicionar una casa de semillas en la Facultad de Ciencias Agrarias, compuesta por
+          espacios para la reproducción, el almacenamiento y el estudio de dichas semillas y en la cual se vinculen los
+          conocimientos de la academia con los del campesinado en el marco de la conservación, usos y saberes de algunas
+          semillas criollas y nativas del altiplano cundiboyacense. Hacemos reproducción en los invernaderos de la
+          Universidad y participamos/fomentamos otros espacios de conocimiento, diálogo e intercambio de saberes dentro
+          y fuera de la universidad con académicos, campesinos y población interesada (talleres, mingas de trabajo,
+          sesiones de formación, conversatorios).
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button fill="clear" color="white"
+            style="background-image:url('assets/instagram.png'); background-size:cover"
+            (click)="openInstagram('desdelaraiz_un', 'https://www.instagram.com/desdelaraiz_un/')">
+            <ion-icon name="logo-instagram"></ion-icon>
+            <strong align="right">Siguenos en Instagram</strong>
+          </ion-button>
+          <ion-button color="twitter" (click)="openTwitter('DLR_UN', 'https://www.twitter.com/DLR_UN')">
+            <ion-icon name="logo-twitter"></ion-icon>
+            <strong align="right">Siguenos en Twitter</strong>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img width="10" height="10" src="assets/herpetos.jpg"></ion-img>
+          <ion-card-title>Herpetos UN</ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon>
+          <ion-label align="center">Facultad: Ciencias</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="mail-outline"></ion-icon>
+          <ion-label align="center">herpetosun_bog@unal.edu.co</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-instagram"></ion-icon>
+          <ion-label align="center">@herpetos_un</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-label align="center">Herpetos UN</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          Grupo enfocado al desarrollo y aplicación de la ingeniería automotriz utilizando los vehículos tipo kart de la
+          UN
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button fill="clear" color="white"
+            style="background-image:url('assets/instagram.png'); background-size:cover"
+            (click)="openInstagram('herpetos_un', 'https://www.instagram.com/herpetos_un/')">
+            <ion-icon name="logo-instagram"></ion-icon>
+            <strong align="right">Siguenos en Instagram</strong>
+          </ion-button>
+          <ion-button color="facebook"
+            (click)="openFacebook('groups/bioreptilesun', 'https://www.facebook.com/groups/bioreptilesun')">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <strong align="right">Siguenos en Facebook</strong>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-slide>
+  </ion-slides>
+
+
+</ion-content>

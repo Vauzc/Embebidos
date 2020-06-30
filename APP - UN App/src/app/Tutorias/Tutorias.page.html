@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-button fill="clear" slot="start" routerLink="/tab2">
+      <ion-icon name="return-down-back" color=white></ion-icon>
+    </ion-button>
+    <ion-title>
+      Tutorias
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item lines="none" *ngIf="validar(tutorias)">
+    <ng-container *ngFor="let Tutorias of tutorias;let i = index" [attr.data-index]="i">
+      <ion-card class="cartas_ini" *ngIf="validar(Tutorias[0])">
+        <ion-card-header color="mio" tappable (click)="validarshMa(i)">
+          <ion-grid>
+            <ion-row>
+              <ion-col size="9" size-sm>
+                <ion-card-title style="font-size:18px">{{Tutorias[0][2]}}</ion-card-title>
+              </ion-col>
+              <ion-col size="1" size-sm>
+              </ion-col>
+              <ion-col>
+                <ion-icon name="chevron-down-outline" side="end" *ngIf="shMa[i]"></ion-icon>
+                <ion-icon name="chevron-forward-outline" side="end" *ngIf="!shMa[i]"></ion-icon>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-header>
+        <ion-card-content *ngIf="shMa[i]">
+          <ng-container *ngFor="let LL of semana;let j = index">
+            <ion-card *ngIf="validar(LL[i])">
+              <ion-card-header color="secondary" tappable (click)="validarshDi(i,j)">
+                <ion-grid>
+                  <ion-row>
+                    <ion-col size="8" size-sm>
+                      <ion-card-title style="font-size:15px">{{LL[i][0][4]}}</ion-card-title>
+                    </ion-col>
+                    <ion-col size="2" size-sm>
+                    </ion-col>
+                    <ion-col>
+                      <ion-icon name="chevron-down-outline" side="end" *ngIf="shDi[i][j]"></ion-icon>
+                      <ion-icon name="chevron-forward-outline" side="end" *ngIf="!shDi[i][j]"></ion-icon>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+              </ion-card-header>
+              <ion-card-content *ngIf="shDi[i][j]">
+                <ion-card *ngFor="let tut of LL[i]">
+                  <ion-item *ngIf="validar(tut[5])">
+                    <ion-icon name="alarm-outline"></ion-icon>
+                    <ion-label style="font-size:18px">{{tut[5]}}</ion-label>
+                  </ion-item>
+                  <ion-item *ngIf="validar(tut[6])">
+                    <ion-icon name="locate-outline"></ion-icon>
+                    <ion-label style="font-size:18px">{{tut[6]}}</ion-label>
+                  </ion-item>
+                </ion-card>
+              </ion-card-content>
+            </ion-card>
+          </ng-container>
+        </ion-card-content>
+      </ion-card>
+    </ng-container>
+  </ion-item>
+  <ion-item lines="none" class="esp2" *ngIf="!validar(tutorias)">
+    <ion-img src="assets/Imagenes/Noparati.jpg"></ion-img>
+  </ion-item>
+  <ion-item lines="none" *ngIf="!validar(tutorias)">
+    <ion-text class="esp2">
+      <h2> No hay tutorias para ti</h2>
+    </ion-text>
+  </ion-item>
+
+</ion-content>

@@ -1,0 +1,118 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button fill="clear" slot="start" routerLink="/tab1">
+      <ion-icon name="return-down-back"></ion-icon>
+    </ion-button>
+    <ion-title align="center">Nuevo grupo de estudio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+  <ion-content>
+    <ion-card>
+
+      <ion-item>
+        <ion-label position="floating">Escribe tu usuario</ion-label>
+        <ion-input [(ngModel)]="usuario"></ion-input>
+      </ion-item>
+
+      <ion-item>
+      <ion-select placeholder="Selecciona una materia" [(ngModel)]="materia_G">
+        <ng-container *ngFor="let mat of materias">
+            <ion-select-option value="{{mat.value}}">{{mat.text}}</ion-select-option>
+        </ng-container>
+      </ion-select>
+      </ion-item>
+
+
+      <!--<ion-card>-->
+        <ion-item>
+          <ion-label>Hora de inicio</ion-label>
+          <ion-select placeholder="Elija Uno" [(ngModel)]="Hini.numero" (ionChange)="validate(Hini.numero)">
+            <ion-select-option value=0>00:00</ion-select-option>
+            <ion-select-option value=1>01:00</ion-select-option>
+            <ion-select-option value=2>02:00</ion-select-option>
+            <ion-select-option value=3>03:00</ion-select-option>
+            <ion-select-option value=4>04:00</ion-select-option>
+            <ion-select-option value=5>05:00</ion-select-option>
+            <ion-select-option value=6>06:00</ion-select-option>
+            <ion-select-option value=7>07:00</ion-select-option>
+            <ion-select-option value=8>08:00</ion-select-option>
+            <ion-select-option value=9>09:00</ion-select-option>
+            <ion-select-option value=10>10:00</ion-select-option>
+            <ion-select-option value=11>11:00</ion-select-option>
+            <ion-select-option value=12>12:00</ion-select-option>
+            <ion-select-option value=13>13:00</ion-select-option>
+            <ion-select-option value=14>14:00</ion-select-option>
+            <ion-select-option value=15>15:00</ion-select-option>
+            <ion-select-option value=16>16:00</ion-select-option>
+            <ion-select-option value=17>17:00</ion-select-option>
+            <ion-select-option value=18>18:00</ion-select-option>
+            <ion-select-option value=19>19:00</ion-select-option>
+            <ion-select-option value=20>20:00</ion-select-option>
+            <ion-select-option value=21>21:00</ion-select-option>
+            <ion-select-option value=22>22:00</ion-select-option>
+            <ion-select-option value=23>23:00</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item *ngIf="Hini.set">
+          <ion-label>Hora de fin</ion-label>
+          <ion-select placeholder="Elija Uno" [(ngModel)]="Hfin1.value" (ionChange)="validate2()">
+            <ion-select-option *ngIf="Hfin[0].set" value=0>00:00</ion-select-option>
+            <ion-select-option *ngIf="Hfin[1].set" value=1>01:00</ion-select-option>
+            <ion-select-option *ngIf="Hfin[2].set" value=2>02:00</ion-select-option>
+            <ion-select-option *ngIf="Hfin[3].set" value=3>03:00</ion-select-option>
+            <ion-select-option *ngIf="Hfin[4].set" value=4>04:00</ion-select-option>
+            <ion-select-option *ngIf="Hfin[5].set" value=5>05:00</ion-select-option>
+            <ion-select-option *ngIf="Hfin[6].set" value=6>06:00</ion-select-option>
+            <ion-select-option *ngIf="Hfin[7].set" value=7>07:00</ion-select-option>
+            <ion-select-option *ngIf="Hfin[8].set" value=8>08:00</ion-select-option>
+            <ion-select-option *ngIf="Hfin[9].set" value=9>09:00</ion-select-option>
+            <ion-select-option *ngIf="Hfin[10].set" value=10>10:00</ion-select-option>
+            <ion-select-option *ngIf="Hfin[11].set" value=11>11:00</ion-select-option>
+            <ion-select-option *ngIf="Hfin[12].set" value=12>12:00</ion-select-option>
+            <ion-select-option *ngIf="Hfin[13].set" value=13>13:00</ion-select-option>
+            <ion-select-option *ngIf="Hfin[14].set" value=14>14:00</ion-select-option>
+            <ion-select-option *ngIf="Hfin[15].set" value=15>15:00</ion-select-option>
+            <ion-select-option *ngIf="Hfin[16].set" value=16>16:00</ion-select-option>
+            <ion-select-option *ngIf="Hfin[17].set" value=17>17:00</ion-select-option>
+            <ion-select-option *ngIf="Hfin[18].set" value=18>18:00</ion-select-option>
+            <ion-select-option *ngIf="Hfin[19].set" value=19>19:00</ion-select-option>
+            <ion-select-option *ngIf="Hfin[20].set" value=20>20:00</ion-select-option>
+            <ion-select-option *ngIf="Hfin[21].set" value=21>21:00</ion-select-option>
+            <ion-select-option *ngIf="Hfin[22].set" value=22>22:00</ion-select-option>
+            <ion-select-option *ngIf="Hfin[23].set" value=23>23:00</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-input placeholder="Lugar" maxlength="100" [(ngModel)]="coments"></ion-input>
+        </ion-item>
+      </ion-card>
+
+      <ion-card>
+        <ion-item>
+          <ion-label>Mesa (opcional)</ion-label>
+          <ion-select placeholder="Elija una" [(ngModel)]="Rmesa" (ionChange)="Ajuste(Rmesa)">
+            <div *ngFor="let item of libres;">
+              <ion-select-option [value]='item'>Mesa {{item}}</ion-select-option>
+            </div>
+          </ion-select>
+        </ion-item>
+
+        
+      </ion-card>
+
+    <section *ngIf="validarcrear()">
+      <ion-footer no-shadow>
+        <ion-toolbar position="bottom">
+          <ion-button expand="block" color="primary" (click)="Confirmacion()"  >Crear
+          </ion-button>
+        </ion-toolbar>
+      </ion-footer>
+    </section>
+
+
+  </ion-content>
+

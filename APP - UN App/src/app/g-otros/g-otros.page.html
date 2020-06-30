@@ -1,0 +1,594 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-button fill="clear" slot="start" routerLink="/grupos-e-inicio">
+      <ion-icon name="return-down-back" color=white></ion-icon>
+    </ion-button>
+    <ion-title align="center">
+      Otros grupos estudiantiles 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides pager="true" [options]="slideOpts" color="medium">
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img width="10" height="10" src="assets/4_1_acem.jpg"></ion-img>
+          <ion-card-title>ACEMUNAL</ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon> 
+          <ion-label align="center">Facultad: Medicina</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-instagram"></ion-icon>
+          <ion-label align="center">@acemunal</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-label align="center">Asociación Científica de Estudiantes de Medicina - Acemunal</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          Parte de ASCEMCOL (Asociación de Sociedades Científicas de Estudiantes de Medicina de Colombia). Grupo de
+          estudiantes de medicina con vocación social. Se divide en diferentes comités (salud pública, reproductiva,
+          derechos humanos, intercambios, entre otros). Realizan brigadas de salud, campañas de concientización, etc.
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button fill="clear" color="white"
+            style="background-image:url('assets/instagram.png'); background-size:cover"
+            (click)="openInstagram('acemunal', 'https://www.instagram.com/acemunal/')">
+            <ion-icon name="logo-instagram"></ion-icon>
+            <strong align="right">Siguenos en Instagram</strong>
+          </ion-button>
+          <ion-button color="facebook" (click)="openFacebook('ACEMUNAL', 'https://www.facebook.com/ACEMUNAL/')">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <strong align="right">Siguenos en Facebook</strong>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-slide>
+    <!-- <button type="submit" float-left ion-button  color="primary" class="btnPrev" (click)="prev()">Prev</button>
+    <button type="submit" float-right ion-button color="primary" class="btnNext" (click)="next()">Next</button>
+        -->
+
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img width="10" height="10" src="assets/4_3_gaeds.jpg"></ion-img>
+          <ion-card-title>GAEDS UN</ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon>
+          <ion-label align="center">Facultad: No Adscrito</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-instagram"></ion-icon>
+          <ion-label align="center">@gaedsun</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-label align="center">GAEDS UN - Grupo de Apoyo y Estudio de la Diversidad de la Sexualidad</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          El Grupo de Apoyo y Estudios de la Diversidad de la Sexualidad, Universidad Nacional de Colombia; GAEDS-UN
+          tiene por objetivo construir, en el marco del reconocimiento de las diversidades de la sexualidad, un espacio
+          de discusión y de encuentro académico, lúdico y comunitario, donde se generen escenarios de concertación entre
+          las distintas voces de la comunidad universitaria y la sociedad en general. Además, promover la construcción
+          de un discurso incluyente, libre de todo prejuicio, pero ante todo respetuoso de lo que implica la
+          multiplicidad y pluralidad de formas de realización de la sexualidad, como un acto de autonomía, no
+          susceptible de exclusión y discriminación.
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button fill="clear" color="white"
+            style="background-image:url('assets/instagram.png'); background-size:cover"
+            (click)="openInstagram('gaedsun', 'https://www.instagram.com/gaedsun/')">
+            <ion-icon name="logo-instagram"></ion-icon>
+            <strong align="right">Siguenos en Instagram</strong>
+          </ion-button>
+          <ion-button color="facebook"
+            (click)="openFacebook('groups/8452257935', 'https://www.facebook.com/groups/8452257935')">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <strong align="right">Siguenos en Facebook</strong>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img width="10" height="10" src="assets/4_18_arritmia.jpg"></ion-img>
+          <ion-card-title>Arritmia Orquesta</ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon>
+          <ion-label align="center">Facultad: Medicina</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="mail-outline"></ion-icon>
+          <ion-label align="center">arritmiaorquesta@gmail.com</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-instagram"></ion-icon>
+          <ion-label align="center">@arritmiaorquesta</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-youtube"></ion-icon>
+          <ion-label align="center">Arritmia Orquesta</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          "El proyecto Arritmia Orquesta es un grupo interfaciltades entre la Facultad de Medicina y la Facultad de
+          Ciencias Humanas de la UN, que busca crear un espacio de sano esparcimiento a través de la interpretación de
+          música tropical (como lo son salsa, merengue, cumbia, entre otros géneros), que representa parte del folclore
+          del país, y permite la integración de los estudiantes de las diversas regiones, generando un espacio adicional
+          dentro del ambiente académico, acompañado de la integridad de cada uno de los participantes, enfocado en
+          crear, apoyar y fortalecer los conocimientos musicales, generar sentido de pertenencia y responsabilidad, y
+          fomentar la creación de nuevos lazos de amistad entre los miembros.
+          Arritmia Orquesta al estar compuesto por estudiantes (de pregrado y posgrado), profesores y administrativos de
+          las facultades de Medicina y Ciencias Humanas, como actores activos dentro de la agrupación, permite el
+          ingreso de otros miembros de la Comunidad Universitaria generando un espacio adicional que motive la buena
+          inversión del tiempo libre, y genere un apoyo para diversas actividades de la vida cotidiana para cada uno de
+          sus integrantes, como puesta en escena, manejo de escenarios y público, expresión oral y artística, trabajo en
+          grupo y demàs sucesos que se presentan en los diversos espacios de los ámbitos laborales y académicos.
+          Por otra parte genera un espacio adicional para aquellos actores pasivos (bailadores, oyentes y demàs
+          población circundante a los ensayos y presentaciones) en los cuales se recalcará la importancia de la música
+          tropical en el contexto del país y se genere un espacio de sana entretención."
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button fill="clear" color="white"
+            style="background-image:url('assets/instagram.png'); background-size:cover"
+            (click)="openInstagram('arritmiaorquesta', 'https://www.instagram.com/arritmiaorquesta/')">
+            <ion-icon name="logo-instagram"></ion-icon>
+            <strong align="right">Siguenos en Instagram</strong>
+          </ion-button>
+          <ion-button color="youtube"
+            (click)="openYoutube('channel/UCzdgfT2fBctAclgmIea0scw', 'https://m.youtube.com/channel/UCzdgfT2fBctAclgmIea0scw')">
+            <ion-icon name="logo-youtube"></ion-icon>
+            <strong align="right">Siguenos en Youtube</strong>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img width="10" height="10" src="assets/4_19_debate.png"></ion-img>
+          <ion-card-title>Sociedad de Debate UN</ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon>
+          <ion-label align="center">Facultad: Interfacultad</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="mail-outline"></ion-icon>
+          <ion-label align="center">sdebateun@gmail.com</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-instagram"></ion-icon>
+          <ion-label align="center">@nacho.sdun</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-label align="center">Sociedad de Debate UN</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          "La Sociedad de Debate UN es un grupo interfacultades de la Universidad Nacional de
+          Colombia que tiene como objetivo mejorar las habilidades comunicativas de la comunidad universitaria –a
+          niveles verbal, corporal y
+          argumentativo, principalmente–, con el fin de aumentar la incidencia real de la misma en el debate académico,
+          económico, político y
+          social.
+          Para ello, durante diez años la Sociedad de Debate UN ha realizado diversas actividades que promueven el
+          desarrollo de las destrezas expresivas y
+          argumentativas de la comunidad universitaria y la sociedad en general, tales como talleres de oralidad,
+          conferencias, formación
+          competitiva y concursos. Paralelo a la gestión de actividades de formación dirigidas al público, la Sociedad
+          de Debate UN también tiene
+          como objetivo la formación de estudiantes interesados en hacer uso de sus habilidades comunicativas para el
+          debate competitivo,
+          actividad que fomenta el diálogo académico, el trabajo en equipo, la disciplina personal y el respeto."
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button fill="clear" color="white"
+            style="background-image:url('assets/instagram.png'); background-size:cover"
+            (click)="openInstagram('nacho.sdun', 'https://www.instagram.com/nacho.sdun/')">
+            <ion-icon name="logo-instagram"></ion-icon>
+            <strong align="right">Siguenos en Instagram</strong>
+          </ion-button>
+          <ion-button color="facebook" (click)="openFacebook('UNdebate', 'https://www.facebook.com/UNdebate/')">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <strong align="right">Siguenos en Facebook</strong>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img width="10" height="10" src="assets/4_20_gen.jpg"></ion-img>
+          <ion-card-title>UNGEN</ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon>
+          <ion-label align="center">Facultad: No Adscrito</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="mail-outline"></ion-icon>
+          <ion-label align="center">apoyo6_bog@unal.edu.co</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-instagram"></ion-icon>
+          <ion-label align="center">@ungen3</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-label align="center">Un-Gen</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          UNGEN es una iniciativa de estudiantes de la Red Estudiantil de Acompañamiento Integran que tiene como
+          objetivo propiciar espacios de discusión en torno al tema de género y cómo este se relaciona con la vida
+          universitaria. este espacio busca la inclusión de todos y todas a través de la educación de género y sexual
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button fill="clear" color="white"
+            style="background-image:url('assets/instagram.png'); background-size:cover"
+            (click)="openInstagram('ungen3', 'https://www.instagram.com/ungen3/')">
+            <ion-icon name="logo-instagram"></ion-icon>
+            <strong align="right">Siguenos en Instagram</strong>
+          </ion-button>
+          <ion-button color="facebook" (click)="openFacebook('UNGENUnal', 'https://www.facebook.com/UNGENUnal/')">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <strong align="right">Siguenos en Facebook</strong>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img width="10" height="10" src="assets/4_21_thee.jpg"></ion-img>
+          <ion-card-title>The E Theater</ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon>
+          <ion-label align="center">Facultad: Ciencias Humanas e Ingenieria</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="mail-outline"></ion-icon>
+          <ion-label align="center">theetheater_bog@unal.edu.co</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-label align="center">The E theater</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          Grupo de teatro bilingue con proposito cultural y académico orientado a la promoción del bilingüismo.
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button color="facebook" (click)="openFacebook('theetheater', 'https://www.facebook.com/theetheater/')">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <strong align="right">Siguenos en Facebook</strong>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img width="10" height="10" src="assets/4_22_proposon.jpg"></ion-img>
+          <ion-card-title>Grupo de Teatro Clásico Prósopon</ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon>
+          <ion-label align="center">Facultad: Ciencias Humanas</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="mail-outline"></ion-icon>
+          <ion-label align="center">prosopon_bog@unal.edu.co</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-label align="center">Grupo de Teatro Clásico Prósopon UNAL</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          Grupo de teatro constituido por estudiantes y egresados del programa curricular en Español y Filología Clásica
+          del departamento de Lingüística. Buscamos poner en debate desde el escenario problemáticas actuales del país
+          en un contexto antiguo como lo era el teatro clásico grecolatino.
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button color="facebook" (click)="openFacebook('ProsoponUNAL', 'https://www.facebook.com/ProsoponUNAL')">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <strong align="right">Siguenos en Facebook</strong>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img width="10" height="10" src="assets/4_23_salud.png"></ion-img>
+          <ion-card-title>Grupo Estudiantil Salud Activa</ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon>
+          <ion-label align="center">Facultad: Medicina</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="mail-outline"></ion-icon>
+          <ion-label align="center">saludactivaun@gmail.com</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-label align="center">Salud Activa UN</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-instagram"></ion-icon>
+          <ion-label align="center">@saludactivaun</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-twitter"></ion-icon>
+          <ion-label align="center">@saludactivaun</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          Somos un grupo de estudiantes que se interesa por comprender y estudiar todos los problemas sociales que
+          aquejan a nuestro país y tenemos como objetivo principal el fomenrar el pensamiento crítico de los estudiantes
+          y el interés por el estudio de la sociedad en que vivimos
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button fill="clear" color="white"
+            style="background-image:url('assets/instagram.png'); background-size:cover"
+            (click)="openInstagram('saludactivaun', 'https://www.instagram.com/saludactivaun/')">
+            <ion-icon name="logo-instagram"></ion-icon>
+            <strong align="right">Siguenos en Instagram</strong>
+          </ion-button>
+          <ion-button color="facebook"
+            (click)="openFacebook('SaludActivaUN', 'https://www.facebook.com/SaludActivaUN/')">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <strong align="right">Siguenos en Facebook</strong>
+          </ion-button>
+          <ion-button color="twitter" (click)="openTwitter('saludactivaun', 'https://twitter.com/saludactivaun')">
+            <ion-icon name="logo-twitter"></ion-icon>
+            <strong align="right">Siguenos en Twitter</strong>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img width="10" height="10" src="assets/4_24_cafe.jpg"></ion-img>
+          <ion-card-title>Un café converso</ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon>
+          <ion-label align="center">Facultad: Enfermería e Ingeniería</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-instagram"></ion-icon>
+          <ion-label align="center">@uncafeconverso</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          Grupo de estudiantes que desarrollamos talleres y actividades lúdicas y reflexivas que pretenden abordar temas
+          complementarios a la vida académica. Por ejemplo, sanidad emocional, proyecto de vida, entre otros.
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button fill="clear" color="white"
+            style="background-image:url('assets/instagram.png'); background-size:cover"
+            (click)="openInstagram('uncafeconverso', 'https://www.instagram.com/uncafeconverso/')">
+            <ion-icon name="logo-instagram"></ion-icon>
+            <strong align="right">Siguenos en Instagram</strong>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img width="10" height="10" src="assets/4_25_razon.jpg"></ion-img>
+          <ion-card-title>Entre Razón y Religión</ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon>
+          <ion-label align="center">Facultad: No Adscrito</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-instagram"></ion-icon>
+          <ion-label align="center">@entrerazonyreligion</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          Grupo de estudiantes interesados en generar espacios dinámicos de dialogo y examinar posturas y preguntas a la
+          luz de la biblia, la filosofía y la ciencia.
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button fill="clear" color="white"
+            style="background-image:url('assets/instagram.png'); background-size:cover"
+            (click)="openInstagram('entrerazonyreligion', 'https://www.instagram.com/entrerazonyreligion/')">
+            <ion-icon name="logo-instagram"></ion-icon>
+            <strong align="right">Siguenos en Instagram</strong>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img width="10" height="10" src="assets/4_26_son.jpg"></ion-img>
+          <ion-card-title>Son de la Nacho</ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon>
+          <ion-label align="center">Facultad: No Adscrito</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-instagram"></ion-icon>
+          <ion-label align="center">@sondelanacho</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-label align="center">Clases de salsa cerca a la U.N.</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          Grupo de baile de salsa integrado en su mayoría por egresados de la UN y que hicieron parte del GAI de Salsa y
+          que decidieron continuar su aprendizaje para competir a nivel local y nacional.
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button fill="clear" color="white"
+            style="background-image:url('assets/instagram.png'); background-size:cover"
+            (click)="openInstagram('sondelanacho', 'https://www.instagram.com/sondelanacho/')">
+            <ion-icon name="logo-instagram"></ion-icon>
+            <strong align="right">Siguenos en Instagram</strong>
+          </ion-button>
+          <ion-button color="facebook"
+            (click)="openFacebook('groups/clasesdesalsacercaalaUN', 'https://www.facebook.com/groups/clasesdesalsacercaalaUN/')">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <strong align="right">Siguenos en Facebook</strong>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img width="10" height="10" src="assets/4_27_mimesis.jpg"></ion-img>
+          <ion-card-title>Mímesis Teatro</ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon>
+          <ion-label align="center">Facultad: Ciencias Humanas, Artes y Ciencias Económicas</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-instagram"></ion-icon>
+          <ion-label align="center">@teatro.mimesis</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-label align="center">Mimesis Teatro Ciencia</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-youtube"></ion-icon>
+          <ion-label align="center">mimesis teatro ciencia</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          Grupo de teatro universitario interesado en montaje teatral, taller de formación actoral y presentación de
+          performances, intentamos que nuestro contenido brinde un mensaje al público y en lo posible presentamos obras
+          con crítica social.
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button fill="clear" color="white"
+            style="background-image:url('assets/instagram.png'); background-size:cover"
+            (click)="openInstagram('teatro.mimesis', 'https://www.instagram.com/teatro.mimesis/')">
+            <ion-icon name="logo-instagram"></ion-icon>
+            <strong align="right">Siguenos en Instagram</strong>
+          </ion-button>
+          <ion-button color="facebook"
+            (click)="openFacebook('MimesisTeatroUn', 'https://www.facebook.com/MimesisTeatroUn/')">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <strong align="right">Siguenos en Facebook</strong>
+          </ion-button>
+          <ion-button color="youtube"
+            (click)="openYoutube('channel/UCvUMDUh2HZdKfWytAA6SeCQ', 'https://www.youtube.com/channel/UCvUMDUh2HZdKfWytAA6SeCQ')">
+            <ion-icon name="logo-youtube"></ion-icon>
+            <strong align="right">Siguenos en Youtube</strong>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-img width="10" height="10" src="assets/4_28_cur.png"></ion-img>
+          <ion-card-title>Comunidad Universitaria Reformada</ion-card-title>
+        </ion-card-header>
+
+        <ion-item>
+          <ion-icon name="business-outline"></ion-icon>
+          <ion-label align="center">Facultad: Ciencias Humanas, Ciencias, Ingenieria</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="mail-outline"></ion-icon>
+          <ion-label align="center">curunal_bog@unal.edu.co</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-instagram"></ion-icon>
+          <ion-label align="center">@curunal</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-label align="center">Comunidad Universitaria Reformada</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          Grupo estudiantil que ofrece clubes de conversación en inglés con hablantes nativos y estudios bíblicos (ambos
+          independientes). Durante la cuarentena, ofrecemos grupos pequeños de contacto/discusión los lunes a las 4PM,
+          un estudio principal los martes a las 8PM, un estudio de los basics del cristianismo los miercoles a las 2PM,
+          y otras actividades de convivencia los jueves y viernes, todo por ZOOM.
+        </ion-card-content>
+        <ion-card-content>
+          <ion-button color="success" (click)="openUrl('https://www.curunal.org')">Mas Información</ion-button>
+          <ion-button fill="clear" color="white"
+            style="background-image:url('assets/instagram.png'); background-size:cover"
+            (click)="openInstagram('curunal', 'https://www.instagram.com/curunal/')">
+            <ion-icon name="logo-instagram"></ion-icon>
+            <strong align="right">Siguenos en Instagram</strong>
+          </ion-button>
+          <ion-button color="facebook"
+            (click)="openFacebook('clasesdesalsacercaalaUN', 'https://www.facebook.com/groups/clasesdesalsacercaalaUN/')">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <strong align="right">Siguenos en Facebook</strong>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-slide>
+
+
+  </ion-slides>
+
+</ion-content>

@@ -1,0 +1,157 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-button fill="clear" slot="start" routerLink="/tab2">
+      <ion-icon name="return-down-back" color=white></ion-icon>
+    </ion-button>
+    <ion-title>
+      Posgrados
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card  class="cartas_ini" *ngIf="validar(Posgrados)">
+    <ion-card-header color="mio" tappable (click)="collapseCard = !collapseCard">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="9" size-sm>
+            <ion-card-title>Especializaciones</ion-card-title>
+          </ion-col>
+          <ion-col size="1" size-sm>
+          </ion-col>
+          <ion-col>
+            <ion-icon name="chevron-down-outline" side="end" *ngIf="collapseCard"></ion-icon>
+            <ion-icon name="chevron-forward-outline" side="end" *ngIf="!collapseCard"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-header>
+    <ng-container *ngIf="collapseCard">
+      <ion-card-content *ngIf="validar(Especializacion)">
+        <ion-list>
+          <ion-item *ngFor="let pos of Especializacion">
+              <ng-container *ngIf="validar(pos[3])">
+                  <ion-icon name="school-outline" slot="start"></ion-icon>
+                  <ion-label class="ion-text-wrap">
+                    <ion-text style="font-size:17px">
+                      {{pos[3]}}
+                    </ion-text>
+                  </ion-label>
+              </ng-container>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+      <ion-card-content *ngIf="!validar(Especializacion)">
+        <ion-item>
+          <ion-text class="esp2">
+            <h2> No hay especializaciones para ti</h2>
+          </ion-text>
+        </ion-item>
+      </ion-card-content>
+    </ng-container>
+  </ion-card>
+
+  <ion-card  class="cartas_ini" *ngIf="validar(Posgrados)">
+    <ion-card-header color="secondary" tappable (click)="collapseCard2 = !collapseCard2">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="9" size-sm>
+            <ion-card-title>Maestrias</ion-card-title>
+          </ion-col>
+          <ion-col size="1" size-sm>
+          </ion-col>
+          <ion-col>
+            <ion-icon name="chevron-down-outline" side="end" *ngIf="collapseCard2"></ion-icon>
+            <ion-icon name="chevron-forward-outline" side="end" *ngIf="!collapseCard2"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-header>
+    <ng-container *ngIf="collapseCard2">
+      <ion-card-content *ngIf="validar(Maestria)">
+        <ion-list>
+          <ion-item *ngFor="let pos of Maestria">
+              <ng-container *ngIf="validar(pos[3])">
+                  <ion-icon name="ribbon-outline" slot="start"></ion-icon>
+                  <ion-label class="ion-text-wrap">
+                    <ion-text style="font-size:17px">
+                      {{pos[3]}}
+                    </ion-text>
+                  </ion-label>
+              </ng-container>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+      <ion-card-content *ngIf="!validar(Maestria)">
+        <ion-item>
+          <ion-text class="esp2">
+            <h2> No hay maestrias para ti</h2>
+          </ion-text>
+        </ion-item>
+      </ion-card-content>
+    </ng-container>
+  </ion-card>
+
+  <ion-card  class="cartas_ini" *ngIf="validar(Posgrados)">
+    <ion-card-header color="acad2" tappable (click)="collapseCard3 = !collapseCard3">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="9" size-sm>
+            <ion-card-title>Doctorados</ion-card-title>
+          </ion-col>
+          <ion-col size="1" size-sm>
+          </ion-col>
+          <ion-col>
+            <ion-icon name="chevron-down-outline" side="end" *ngIf="collapseCard3"></ion-icon>
+            <ion-icon name="chevron-forward-outline" side="end" *ngIf="!collapseCard3"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-header>
+    <ng-container *ngIf="collapseCard3">
+      <ion-card-content *ngIf="validar(Doctorado)">
+      <ion-list>
+        <ion-item *ngFor="let pos of Doctorado">
+            <ng-container *ngIf="validar(pos[3])">
+                <ion-icon name="medal-outline" slot="start"></ion-icon>
+                <ion-label class="ion-text-wrap">
+                  <ion-text style="font-size:17px">
+                    {{pos[3]}}
+                  </ion-text>
+                </ion-label>
+            </ng-container>
+        </ion-item>
+      </ion-list>
+      </ion-card-content>
+      <ion-card-content *ngIf="!validar(Doctorado)">
+        <ion-item>
+          <ion-text class="esp2">
+            <h2> No hay doctorados para ti</h2>
+          </ion-text>
+        </ion-item>
+      </ion-card-content>
+    </ng-container>
+  </ion-card>
+
+  <ion-item class="esp2" *ngIf="!validar(Posgrados)" lines="none">
+    <ion-img src="assets/Imagenes/Noparati.jpg"></ion-img>
+  </ion-item>
+  <ion-item *ngIf="!validar(Posgrados)" lines="none">
+    <ion-text class="esp2">
+      <h2> No hay posgrados para ti</h2>
+    </ion-text>
+  </ion-item>
+
+  <p align="center" color="dark" style="font-size:20px">Mas información en:</p>
+  <ion-card color="white" class="esp2" style="width: 145px; height: 200px;" button=true
+    (click)="openUrl('https://admisiones.unal.edu.co/posgrado/oferta-de-programas-curriculares/' )">
+    <ion-card-content>
+      <br>
+      <ion-img src="assets/Imagenes/maestria.jpg"></ion-img>
+      <ion-card-subtitle style="font-size:19px" class="esp2">
+        Todos los posgrados
+      </ion-card-subtitle>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

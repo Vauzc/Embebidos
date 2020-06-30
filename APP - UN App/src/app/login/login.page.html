@@ -1,0 +1,206 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-button fill="clear" slot="start" routerLink="/home">
+      <ion-icon name="return-down-back" color=white></ion-icon>
+    </ion-button>
+    <ion-title >
+      Registro de usuario
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <p *ngIf="submitAttempt" style="color: #ea6153;">Please fill out all details accurately.</p>
+      <ion-list lines="none">
+
+        <form [formGroup]="slideOneForm">
+
+          <ion-item>
+            <ion-label position="floating">Nombre</ion-label>
+            <ion-input formControlName="Nombre" type="text"
+              [class.invalid]="!slideOneForm.controls.Nombre.valid && submitAttempt"></ion-input>
+          </ion-item>
+
+          <ion-item *ngIf="!slideOneForm.controls.Nombre.valid  && submitAttempt">
+            <p>Por favor ingrese un nombre válido.</p>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Apellido</ion-label>
+            <ion-input formControlName="Apellido" type="text"
+              [class.invalid]="!slideOneForm.controls.Apellido.valid && submitAttempt"></ion-input>
+          </ion-item>
+
+          <ion-item *ngIf="!slideOneForm.controls.Apellido.valid  && submitAttempt">
+            <p>Por favor ingrese un apellido válido.</p>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Usuario del SIA</ion-label>
+            <ion-input formControlName="Usuario" type="text"
+              [class.invalid]="!slideOneForm.controls.Usuario.valid && submitAttempt"></ion-input>
+          </ion-item>
+
+          <ion-item *ngIf="!slideOneForm.controls.Usuario.valid  && submitAttempt">
+            <p>Por favor ingrese un usuario válido.</p>
+          </ion-item>
+          
+          <ion-item>
+            <ion-label position="floating">Porcentaje de avance</ion-label>
+            <ion-input formControlName="Avance" type="number"
+              [class.invalid]="!slideOneForm.controls.Avance.valid && submitAttempt"></ion-input>
+          </ion-item>
+
+          <ion-item *ngIf="!slideOneForm.controls.Avance.valid  && submitAttempt">
+            <p>Por favor ingrese un avance válido</p>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">PAPA</ion-label>
+            <ion-input formControlName="PAPA" type="number"
+              [class.invalid]="!slideOneForm.controls.PAPA.valid && submitAttempt"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Facultad</ion-label>
+            <ion-select class="menu" formControlName="Facultad" [interfaceOptions]="customAlertOptions"
+              interface="alert" placeholder="Facultades">
+              <ion-select-option value="Artes">Artes</ion-select-option>
+              <ion-select-option value="Ciencias">Ciencias</ion-select-option>
+              <ion-select-option value="Ciencias Agrarias">Ciencias Agrarias</ion-select-option>
+              <ion-select-option value="Ciencias Económicas">Ciencias Económicas</ion-select-option>
+              <ion-select-option value="Ciencias Humanas">Ciencias Humanas</ion-select-option>
+              <ion-select-option value="Derecho">Derecho, Ciencias políticas y sociales</ion-select-option>
+              <ion-select-option value="Enfermería">Enfermería</ion-select-option>
+              <ion-select-option value="Ingeniería">Ingeniería</ion-select-option>
+              <ion-select-option value="Medicina">Medicina</ion-select-option>
+              <ion-select-option value="Veterinaria">Medicina Veterinaria y Zootecnia</ion-select-option>
+              <ion-select-option value="Odontología">Odontología</ion-select-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Carrera</ion-label>
+            <ion-select *ngIf="Fac()=='Artes'" formControlName="Carrera" [interfaceOptions]="customAlertOptions"
+              interface="alert" placeholder="Carreras">
+              <ion-select-option value="Arquitectura">Arquitectura</ion-select-option>
+              <ion-select-option value="Artes Plásticas">Artes Plásticas</ion-select-option>
+              <ion-select-option value="Cine y Televisión">Cine y Televisión</ion-select-option>
+              <ion-select-option value="Diseño Gráfico">Diseño Gráfico</ion-select-option>
+              <ion-select-option value="Diseño Industrial">Diseño Industrial</ion-select-option>
+              <ion-select-option value="Música">Música</ion-select-option>
+              <ion-select-option value="Música instrumental">Música instrumental</ion-select-option>
+            </ion-select>
+            <ion-select *ngIf="Fac()=='Ciencias'" formControlName="Carrera" [interfaceOptions]="customAlertOptions"
+              interface="alert" placeholder="Carreras">
+              <ion-select-option value="Biología">Biología</ion-select-option>
+              <ion-select-option value="Ciencias de la computación">Ciencias de la computación</ion-select-option>
+              <ion-select-option value="Estadística">Estadística</ion-select-option>
+              <ion-select-option value="Farmacia">Farmacia</ion-select-option>
+              <ion-select-option value="Física">Física</ion-select-option>
+              <ion-select-option value="Geología">Geología</ion-select-option>
+              <ion-select-option value="Matemáticas">Matemáticas</ion-select-option>
+              <ion-select-option value="Química">Química</ion-select-option>
+            </ion-select>
+            <ion-select *ngIf="Fac()=='Ciencias Humanas'" formControlName="Carrera"
+              [interfaceOptions]="customAlertOptions" interface="alert" placeholder="Carreras">
+              <ion-select-option value="Antropología">Antropología</ion-select-option>
+              <ion-select-option value="Español y Filología clásica">Español y Filología clásica</ion-select-option>
+              <ion-select-option value="Estudios literarios">Estudios literarios</ion-select-option>
+              <ion-select-option value="Filología e idiomas Alemán">Filología - Alemán</ion-select-option>
+              <ion-select-option value="Filología e idiomas Francés">Filología - Francés</ion-select-option>
+              <ion-select-option value="Filología e idiomas Inglés">Filología - Inglés</ion-select-option>
+              <ion-select-option value="Filosofía">Filosofía</ion-select-option>
+              <ion-select-option value="Geografía">Geografía</ion-select-option>
+              <ion-select-option value="Historia">Historia</ion-select-option>
+              <ion-select-option value="Lingüística">Lingüística</ion-select-option>
+              <ion-select-option value="Psicología">Psicología</ion-select-option>
+              <ion-select-option value="Sociología">Sociología</ion-select-option>
+              <ion-select-option value="Trabajo social">Trabajo social</ion-select-option>
+            </ion-select>
+            <ion-select *ngIf="Fac()=='Ciencias Agrarias'" formControlName="Carrera"
+              [interfaceOptions]="customAlertOptions" interface="alert" placeholder="Carreras">
+              <ion-select-option value="Ingeniería Agronómica">Ingeniería Agronómica</ion-select-option>
+            </ion-select>
+            <ion-select *ngIf="Fac()=='Ciencias Económicas'" formControlName="Carrera"
+              [interfaceOptions]="customAlertOptions" interface="alert" placeholder="Carreras">
+              <ion-select-option value="Administración de empresas">Administración de empresas</ion-select-option>
+              <ion-select-option value="Contaduría pública">Contaduría pública</ion-select-option>
+              <ion-select-option value="Economía">Economía</ion-select-option>
+            </ion-select>
+            <ion-select *ngIf="Fac()=='Derecho'" formControlName="Carrera" [interfaceOptions]="customAlertOptions"
+              interface="alert" placeholder="Carreras">
+              <ion-select-option value="Ciencia Política">Ciencias Políticas</ion-select-option>
+              <ion-select-option value="Derecho">Derecho</ion-select-option>
+            </ion-select>
+            <ion-select *ngIf="Fac()=='Enfermería'" formControlName="Carrera" [interfaceOptions]="customAlertOptions"
+              interface="alert" placeholder="Carreras">
+              <ion-select-option value="Enfermería">Enfermería</ion-select-option>
+            </ion-select>
+            <ion-select *ngIf="Fac()=='Ingeniería'" formControlName="Carrera" [interfaceOptions]="customAlertOptions"
+              interface="alert" placeholder="Carreras">
+              <ion-select-option value="Ingeniería Agrícola">Ingeniería Agrícola</ion-select-option>
+              <ion-select-option value="Ingeniería Civil">Ingeniería Civil</ion-select-option>
+              <ion-select-option value="Ingeniería de sistemas">Ingeniería de sistemas</ion-select-option>
+              <ion-select-option value="Ingeniería Eléctrica">Ingeniería Eléctrica</ion-select-option>
+              <ion-select-option value="Ingeniería Electrónica">Ingeniería Electrónica</ion-select-option>
+              <ion-select-option value="Ingeniería Industrial">Ingeniería Industrial</ion-select-option>
+              <ion-select-option value="Ingeniería Mecánica">Ingeniería Mecánica</ion-select-option>
+              <ion-select-option value="Ingeniería Mecatrónica">Ingeniería Mecatrónica</ion-select-option>
+              <ion-select-option value="Ingeniería Química">Ingeniería Química</ion-select-option>
+            </ion-select>
+            <ion-select *ngIf="Fac()=='Medicina'" formControlName="Carrera" [interfaceOptions]="customAlertOptions"
+              interface="alert" placeholder="Carreras">
+              <ion-select-option value="Fisioterapia">Fisioterapia</ion-select-option>
+              <ion-select-option value="Fonoaudiología">Fonoaudiología</ion-select-option>
+              <ion-select-option value="Medicina">Medicina</ion-select-option>
+              <ion-select-option value="Nutrición y dietética">Nutrición y dietética</ion-select-option>
+              <ion-select-option value="Terapia ocupacional">Terapia ocupacional</ion-select-option>
+            </ion-select>
+            <ion-select *ngIf="Fac()=='Veterinaria'" formControlName="Carrera" [interfaceOptions]="customAlertOptions"
+              interface="alert" placeholder="Carreras">
+              <ion-select-option value="Medicina Veterinaria">Medicina Veterinaria</ion-select-option>
+              <ion-select-option value="Zootecnia">Zootecnia</ion-select-option>
+            </ion-select>
+            <ion-select *ngIf="Fac()=='Odontología'" formControlName="Carrera" [interfaceOptions]="customAlertOptions"
+              interface="alert" placeholder="Carreras">
+              <ion-select-option value="Odontología">Odontología</ion-select-option>
+            </ion-select>
+
+          </ion-item>
+          <ion-item *ngIf="Carr()==true">
+            <ion-label position="floating">Materias</ion-label>
+            <ion-input formControlName="Materias" type="text" (ionChange)="Materias()"
+              [class.invalid]="!slideOneForm.controls.Materias.valid && submitAttempt"></ion-input>
+            <ion-card *ngFor="let Mat of materias" button=true (click)="addEvent(Mat[2],Mat[0])">
+              <ion-card-header>{{Mat[2]}}</ion-card-header>
+            </ion-card>
+          
+            <!-- <ion-label>Materias Seleccionadas</ion-label> -->
+            </ion-item>
+            <ion-card *ngFor="let item of Horario">
+              <ion-card-header>
+
+                <ion-label color="secondary">{{item[0]}}</ion-label>
+                <ion-button fill="clear" side="end" (click)="Borrar(item)">
+                  <ion-icon name="close-circle-outline"> </ion-icon>
+                </ion-button>
+
+
+              </ion-card-header>
+            </ion-card>
+
+          
+        </form>
+
+      </ion-list>
+
+
+    </ion-card-content>
+  </ion-card>
+  <ion-button [disabled]="limitar()" expand="full" color="dark" (click)="save()"> Ingresar</ion-button>
+
+
+</ion-content>

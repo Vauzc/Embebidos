@@ -1,0 +1,99 @@
+ion-icon {
+    font-size: 30px;
+  }
+ion-content{
+  --background: #fff  url(../../assets/Imagenes/1006.jpg) no-repeat center center / cover;
+}
+
+.icono{
+  min-width: 100px;
+  min-height: 100px;
+
+}
+
+.cartas_ini{
+  max-width: 290px;
+  margin-left: auto;
+  margin-right: auto;
+}
+  .center {
+    display: block;
+    margin: auto;
+    width: 35%;
+   }
+
+   .center1 {
+    display: block;
+    margin: auto;
+    width: 70%;
+   }
+
+   .md .centered-p {
+    text-align: center;
+    margin-left: -32%
+  }
+
+  .centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    width:40%;
+   }
+
+   .upper{
+    margin-top: -20px;
+    
+   }
+///SLIDES
+   .custon-nav{
+    height: 48px;
+    width: 20px;
+    cursor: pointer;
+  
+    vertical-align: middle;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .prev-icon-custom{
+    background: url(https://freakyjolly.com/demo/jquery/OwlCarousel2/nav-icon.png) no-repeat scroll 0px 0px;
+  }
+  .prev-icon-custom.disabled{
+    opacity: 0.4;
+    cursor: default;
+  }
+  .next-icon-custom{
+    background: url(https://freakyjolly.com/demo/jquery/OwlCarousel2/nav-icon.png) no-repeat scroll -32px 0px;
+  }
+  .next-icon-custom.disabled{
+    opacity: 0.4;
+    cursor: default;
+  }
+  .slider-nav{
+    ion-icon{
+        height: 100%;
+    }
+  }
+  
+  .slide-text{
+    position: absolute;
+    color: white;
+    bottom: 30px;
+  }
+
+  .esp {
+    display: block;
+    margin-left: -15px;
+    margin-right: auto;
+    margin-top: -15px;
+   }
+   .esp2 {
+    display: block;
+    margin-left: -15px;
+    margin-right: auto;
+    margin-top: auto;
+    text-align: center;
+   }
+
+

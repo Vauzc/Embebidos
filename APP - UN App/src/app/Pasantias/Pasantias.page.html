@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-button fill="clear" slot="start" routerLink="/tab2">
+      <ion-icon name="return-down-back" color=white></ion-icon>
+    </ion-button>
+    <ion-title>
+      Pasantías y laboral
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+<ion-content >
+  <ion-card class= "centered" color="white" style="width: 220px; height: 230px;" button=true routerLink="/Laboral">
+    <ion-card-content>
+      <ion-img src="assets/Imagenes/laboral.jpg"></ion-img>
+      <ion-card-subtitle style="font-size:19px" class= "center">
+       Laboral
+      </ion-card-subtitle>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card class= "centered" color="white" style="width: 220px; height: 230px;" button=true (click)="openUrl('http://www.spopa.unal.edu.co')">
+      <ion-card-content>
+        <ion-img src="assets/Imagenes/spopa.png"></ion-img>
+        <ion-card-subtitle style="font-size:19px" class= "center" >
+          Sistema de Prácticas o Pasantías
+        </ion-card-subtitle>
+      </ion-card-content>
+  </ion-card>
+  
+  </ion-content>
+  

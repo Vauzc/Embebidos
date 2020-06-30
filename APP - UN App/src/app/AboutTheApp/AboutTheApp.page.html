@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-button fill="clear" slot="start" routerLink="/tab2">
+      <ion-icon name="return-down-back" color=white></ion-icon>
+    </ion-button>
+    <ion-title>
+      Acerca de la aplicación
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+  <ion-content fullscreen>
+    <ion-item lines="none" >
+      <ion-text class="esp2">
+        <h3> Esta aplicación fue creada por:</h3>
+      </ion-text>
+    </ion-item>
+    <ion-item lines="none" class="esp2">
+      <ion-img src="assets/Imagenes/otup.png"></ion-img>
+    </ion-item>
+
+    <ion-fab horizontal="end" vertical="bottom" slot="fixed" class="pos">
+      <ion-fab-button color="light" (click)="opopover($event)">
+        <ion-icon name="help-circle-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+
+</ion-content>
+

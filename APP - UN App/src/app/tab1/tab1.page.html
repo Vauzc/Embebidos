@@ -1,0 +1,249 @@
+<ion-header>
+  <ion-toolbar color="mio">
+    <ion-title text-center>
+      <p class="centered-p">GEA Personal</p>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card color="acad2">
+    <ion-card-header class="esp2" tappable (click)="collapseCard3 = !collapseCard3">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="9" size-sm>
+            <ion-card-title>Tus grupos activos</ion-card-title>
+          </ion-col>
+          <ion-col size="1" size-sm>
+          </ion-col>
+          <ion-col>
+            <ion-icon name="chevron-down-outline" side="end" *ngIf="collapseCard3"></ion-icon>
+            <ion-icon name="chevron-forward-outline" side="end" *ngIf="!collapseCard3"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header color="acad2" class="esp2">
+      <ion-card-title align="center">Grupos de estudio que te pueden interesar</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content color="light" *ngIf="validarGeas(geaso)">
+      <ion-slides pager="true" [options]="slideOpts" color="medium">
+        <ion-slide *ngFor="let g of geaso">
+          <ion-card>
+            <ion-card-header>
+              <ion-card-subtitle>{{g.fac}}</ion-card-subtitle>
+              <ion-card-title>{{g.mat}}</ion-card-title>
+            </ion-card-header>
+
+            <ion-item>
+              <ion-icon name="alarm-outline" slot="start"></ion-icon>
+              <ion-label class="ion-text-wrap">Hora: {{g.Hini}}-{{g.Hfin}}</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="locate-outline" slot="start"></ion-icon>
+              <ion-label class="ion-text-wrap">{{g.lug}}</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="person-outline" slot="start"></ion-icon>
+              <ion-label class="ion-text-wrap">Responsable: {{g.res}}</ion-label>
+            </ion-item>
+            <ion-card-content>
+              {{g.com}}
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+      </ion-slides>
+    </ion-card-content>
+    <ion-card-content *ngIf="!validarGeas(geaso)">
+      <ion-item lines="none" class="esp2">
+        <ion-img src="assets/Imagenes/Noparati.jpg"></ion-img>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-text class="esp2">
+          <h2> No hay GEAs personales para ti</h2>
+        </ion-text>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ng-container *ngIf="collapseCard3">
+    <ion-card *ngFor="let item of Reservas;let i=index">
+      <ion-card-header tappable (click)="valgeas(i)">
+        <ion-item lines="none">
+          <ion-button fill="clear" side="right" (click)="Eliminar(item)">
+            <ion-icon name="close-circle-outline" slot="start"> </ion-icon>
+          </ion-button>
+          <ion-label class="ion-text-wrap">{{item.materia}}</ion-label>
+          <ion-icon name="chevron-down-outline" side="end" *ngIf="boolgea[i]"></ion-icon>
+          <ion-icon name="chevron-forward-outline" side="end" *ngIf="!boolgea[i]"></ion-icon>
+
+
+        </ion-item>
+      </ion-card-header>
+
+      <ng-container *ngIf="boolgea[i]">
+        <ion-card-content *ngIf="validar(Reservas)">
+          <ion-item>
+            <ion-icon name="alarm-outline" slot="start"></ion-icon>
+            <ion-label class="ion-text-wrap">Hora: {{item.inicio.split(":")[0]}}:{{item.inicio.split(":")[1]}} -
+              {{item.fin.split(":")[0]}}:{{item.fin.split(":")[1]}}</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="location-outline" slot="start"></ion-icon>
+            <ion-label class="ion-text-wrap">Lugar: {{item.lugar}}</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="chatbox-outline" slot="start"></ion-icon>
+            <ion-label class="ion-text-wrap">Comentarios: {{item.comentarios}}</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="person-outline" slot="start"></ion-icon>
+            <ion-label class="ion-text-wrap">Responsable: {{item.responsable}}</ion-label>
+          </ion-item>
+          <ion-item *ngIf="validar(item.mesa)">
+            <ion-icon name="library-outline" slot="start"></ion-icon>
+            <ion-label class="ion-text-wrap">Mesa: {{item.mesa}}</ion-label>
+          </ion-item>
+
+        </ion-card-content>
+        <ion-card-content *ngIf="!validar(Reservas)">
+          <ion-item>
+            <ion-text class="esp2">
+              <h2> No hay especializaciones para ti</h2>
+            </ion-text>
+          </ion-item>
+        </ion-card-content>
+      </ng-container>
+
+
+
+
+    </ion-card>
+  </ng-container>
+
+
+
+  <ion-card>
+    <ion-card-header color="acad2" class="esp2" tappable (click)="collapseCard2 = !collapseCard2">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="9" size-sm>
+            <ion-card-title>Crear nuevo grupo</ion-card-title>
+          </ion-col>
+          <ion-col size="1" size-sm>
+          </ion-col>
+          <ion-col>
+            <ion-icon name="chevron-down-outline" side="end" *ngIf="collapseCard2"></ion-icon>
+            <ion-icon name="chevron-forward-outline" side="end" *ngIf="!collapseCard2"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-header>
+    <ion-card-content *ngIf="collapseCard2">
+      <ion-item>
+        <ion-label>Materia</ion-label>
+        <ion-select placeholder="Selecciona una materia" [(ngModel)]="materia_G">
+          <ng-container *ngFor="let mat of materias">
+            <ion-select-option value="{{mat.value}}">
+              <ion-label class="ion-text-wrap">
+                <ion-text style="font-size:14px">
+                  {{mat.text}}
+                </ion-text>
+              </ion-label>
+            </ion-select-option>
+          </ng-container>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Hora de inicio</ion-label>
+        <ion-select placeholder="Elija Uno" [(ngModel)]="Hini.numero" (ionChange)="validate(Hini.numero)">
+          <ion-select-option value=0>00:00</ion-select-option>
+          <ion-select-option value=1>01:00</ion-select-option>
+          <ion-select-option value=2>02:00</ion-select-option>
+          <ion-select-option value=3>03:00</ion-select-option>
+          <ion-select-option value=4>04:00</ion-select-option>
+          <ion-select-option value=5>05:00</ion-select-option>
+          <ion-select-option value=6>06:00</ion-select-option>
+          <ion-select-option value=7>07:00</ion-select-option>
+          <ion-select-option value=8>08:00</ion-select-option>
+          <ion-select-option value=9>09:00</ion-select-option>
+          <ion-select-option value=10>10:00</ion-select-option>
+          <ion-select-option value=11>11:00</ion-select-option>
+          <ion-select-option value=12>12:00</ion-select-option>
+          <ion-select-option value=13>13:00</ion-select-option>
+          <ion-select-option value=14>14:00</ion-select-option>
+          <ion-select-option value=15>15:00</ion-select-option>
+          <ion-select-option value=16>16:00</ion-select-option>
+          <ion-select-option value=17>17:00</ion-select-option>
+          <ion-select-option value=18>18:00</ion-select-option>
+          <ion-select-option value=19>19:00</ion-select-option>
+          <ion-select-option value=20>20:00</ion-select-option>
+          <ion-select-option value=21>21:00</ion-select-option>
+          <ion-select-option value=22>22:00</ion-select-option>
+          <ion-select-option value=23>23:00</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item *ngIf="Hini.set">
+        <ion-label>Hora de fin</ion-label>
+        <ion-select placeholder="Elija Uno" [(ngModel)]="Hfin1.value" (ionChange)="validate2()">
+          <ion-select-option *ngIf="Hfin[0].set" value=0>00:00</ion-select-option>
+          <ion-select-option *ngIf="Hfin[1].set" value=1>01:00</ion-select-option>
+          <ion-select-option *ngIf="Hfin[2].set" value=2>02:00</ion-select-option>
+          <ion-select-option *ngIf="Hfin[3].set" value=3>03:00</ion-select-option>
+          <ion-select-option *ngIf="Hfin[4].set" value=4>04:00</ion-select-option>
+          <ion-select-option *ngIf="Hfin[5].set" value=5>05:00</ion-select-option>
+          <ion-select-option *ngIf="Hfin[6].set" value=6>06:00</ion-select-option>
+          <ion-select-option *ngIf="Hfin[7].set" value=7>07:00</ion-select-option>
+          <ion-select-option *ngIf="Hfin[8].set" value=8>08:00</ion-select-option>
+          <ion-select-option *ngIf="Hfin[9].set" value=9>09:00</ion-select-option>
+          <ion-select-option *ngIf="Hfin[10].set" value=10>10:00</ion-select-option>
+          <ion-select-option *ngIf="Hfin[11].set" value=11>11:00</ion-select-option>
+          <ion-select-option *ngIf="Hfin[12].set" value=12>12:00</ion-select-option>
+          <ion-select-option *ngIf="Hfin[13].set" value=13>13:00</ion-select-option>
+          <ion-select-option *ngIf="Hfin[14].set" value=14>14:00</ion-select-option>
+          <ion-select-option *ngIf="Hfin[15].set" value=15>15:00</ion-select-option>
+          <ion-select-option *ngIf="Hfin[16].set" value=16>16:00</ion-select-option>
+          <ion-select-option *ngIf="Hfin[17].set" value=17>17:00</ion-select-option>
+          <ion-select-option *ngIf="Hfin[18].set" value=18>18:00</ion-select-option>
+          <ion-select-option *ngIf="Hfin[19].set" value=19>19:00</ion-select-option>
+          <ion-select-option *ngIf="Hfin[20].set" value=20>20:00</ion-select-option>
+          <ion-select-option *ngIf="Hfin[21].set" value=21>21:00</ion-select-option>
+          <ion-select-option *ngIf="Hfin[22].set" value=22>22:00</ion-select-option>
+          <ion-select-option *ngIf="Hfin[23].set" value=23>23:00</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-input placeholder="Lugar" maxlength="50" [(ngModel)]="coments"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="Comentarios (Opcional)" maxlength="150" [(ngModel)]="coments2"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Mesa (Opcional)</ion-label>
+        <ion-select placeholder="Elija una" [(ngModel)]="Rmesa" (ionChange)="Ajuste(Rmesa)">
+          <div *ngFor="let item of libres;">
+            <ion-select-option [value]='item'>Mesa {{item}}</ion-select-option>
+          </div>
+        </ion-select>
+      </ion-item>
+    </ion-card-content>
+    <ion-button [disabled]="validarcrear()" expand="block" color="secondary" (click)="Confirmacion()"
+      *ngIf="collapseCard2">Crear
+    </ion-button>
+
+
+  </ion-card>
+
+
+
+
+
+
+</ion-content>
