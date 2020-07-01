@@ -55,7 +55,7 @@ Una vez en el entorno de desarrollo, se abrirá su navegador y le dará una prev
 
 ## Autores
 
-* **Andrés Ricardo Cespedes García** 
+* **Andrés Ricardo Céspedes García** 
 * **Diego Andrés Macias Saenz** 
 * **Jean Paul Romero Castesblanco** 
 * **Valentina Ñustez Castaño** 
