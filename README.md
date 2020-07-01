@@ -55,10 +55,10 @@ Una vez en el entorno de desarrollo, se abrirá su navegador y le dará una prev
 
 ## Autores
 
-* **Andres Cespedes** 
-* **Diego Macias** 
-* **Jean Paul Romero** 
-* **Valentina Ñustez** 
+* **Andrés Ricardo Cespedes García** 
+* **Diego Andrés Macias Saenz** 
+* **Jean Paul Romero Castesblanco** 
+* **Valentina Ñustez Castaño** 
 
 
 ## Acknowledgments
