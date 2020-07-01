@@ -10,16 +10,16 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-item lines="none" *ngIf="validar(tutorias)">
+  <ng-container *ngIf="validar(tutorias)">
     <ng-container *ngFor="let Tutorias of tutorias;let i = index" [attr.data-index]="i">
       <ion-card class="cartas_ini" *ngIf="validar(Tutorias[0])">
         <ion-card-header color="mio" tappable (click)="validarshMa(i)">
           <ion-grid>
             <ion-row>
-              <ion-col size="9" size-sm>
+              <ion-col size="8" size-sm>
                 <ion-card-title style="font-size:18px">{{Tutorias[0][2]}}</ion-card-title>
               </ion-col>
-              <ion-col size="1" size-sm>
+              <ion-col size="3" size-sm>
               </ion-col>
               <ion-col>
                 <ion-icon name="chevron-down-outline" side="end" *ngIf="shMa[i]"></ion-icon>
@@ -63,7 +63,7 @@
         </ion-card-content>
       </ion-card>
     </ng-container>
-  </ion-item>
+  </ng-container>
   <ion-item lines="none" class="esp2" *ngIf="!validar(tutorias)">
     <ion-img src="assets/Imagenes/Noparati.jpg"></ion-img>
   </ion-item>

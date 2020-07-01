@@ -8,23 +8,7 @@
 
 <ion-content [fullscreen]="true">
 
-  <ion-card color="acad2">
-    <ion-card-header class="esp2" tappable (click)="collapseCard3 = !collapseCard3">
-      <ion-grid>
-        <ion-row>
-          <ion-col size="9" size-sm>
-            <ion-card-title>Tus grupos activos</ion-card-title>
-          </ion-col>
-          <ion-col size="1" size-sm>
-          </ion-col>
-          <ion-col>
-            <ion-icon name="chevron-down-outline" side="end" *ngIf="collapseCard3"></ion-icon>
-            <ion-icon name="chevron-forward-outline" side="end" *ngIf="!collapseCard3"></ion-icon>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-card-header>
-  </ion-card>
+  
 
   <ion-card>
     <ion-card-header color="acad2" class="esp2">
@@ -71,6 +55,23 @@
     </ion-card-content>
   </ion-card>
 
+  <ion-card color="acad2">
+    <ion-card-header class="esp2" tappable (click)="collapseCard3 = !collapseCard3">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="9" size-sm>
+            <ion-card-title>Tus grupos activos</ion-card-title>
+          </ion-col>
+          <ion-col size="1" size-sm>
+          </ion-col>
+          <ion-col>
+            <ion-icon name="chevron-down-outline" side="end" *ngIf="collapseCard3"></ion-icon>
+            <ion-icon name="chevron-forward-outline" side="end" *ngIf="!collapseCard3"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-header>
+  </ion-card>
   <ng-container *ngIf="collapseCard3">
     <ion-card *ngFor="let item of Reservas;let i=index">
       <ion-card-header tappable (click)="valgeas(i)">
@@ -160,7 +161,7 @@
         </ion-select>
       </ion-item>
       <ion-item>
-        <ion-label>Hora de inicio</ion-label>
+        <ion-label>Hora de inicio (24h)*</ion-label>
         <ion-select placeholder="Elija Uno" [(ngModel)]="Hini.numero" (ionChange)="validate(Hini.numero)">
           <ion-select-option value=0>00:00</ion-select-option>
           <ion-select-option value=1>01:00</ion-select-option>
@@ -190,7 +191,7 @@
       </ion-item>
 
       <ion-item *ngIf="Hini.set">
-        <ion-label>Hora de fin</ion-label>
+        <ion-label>Hora de fin (24h)</ion-label>
         <ion-select placeholder="Elija Uno" [(ngModel)]="Hfin1.value" (ionChange)="validate2()">
           <ion-select-option *ngIf="Hfin[0].set" value=0>00:00</ion-select-option>
           <ion-select-option *ngIf="Hfin[1].set" value=1>01:00</ion-select-option>
@@ -233,6 +234,7 @@
           </div>
         </ion-select>
       </ion-item>
+      <ion-label><h6> *Recuerde reservar después de la hora actual</h6></ion-label>
     </ion-card-content>
     <ion-button [disabled]="validarcrear()" expand="block" color="secondary" (click)="Confirmacion()"
       *ngIf="collapseCard2">Crear

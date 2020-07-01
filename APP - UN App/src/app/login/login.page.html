@@ -171,7 +171,7 @@
 
           </ion-item>
           <ion-item *ngIf="Carr()==true">
-            <ion-label position="floating">Materias</ion-label>
+            <ion-label position="floating"><ion-icon name="search-outline" side="start"></ion-icon> Materias</ion-label>
             <ion-input formControlName="Materias" type="text" (ionChange)="Materias()"
               [class.invalid]="!slideOneForm.controls.Materias.valid && submitAttempt"></ion-input>
             <ion-card *ngFor="let Mat of materias" button=true (click)="addEvent(Mat[2],Mat[0])">

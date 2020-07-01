@@ -16,6 +16,7 @@ export class MaestriasPage implements OnInit {
   constructor(private modalCtrl : ModalController,private browser : InAppBrowser) { }
 
   ngOnInit() {
+    if (this.Posgrados != null && this.Posgrados != undefined && this.Posgrados.lenght != 0 && this.Posgrados != []) {
     for(var h=0;h<this.Posgrados.length;h++){
         if(this.Posgrados[h][1]=="Especializacion"){
           this.Especializacion.push(this.Posgrados[h])
@@ -25,6 +26,7 @@ export class MaestriasPage implements OnInit {
           this.Doctorado.push(this.Posgrados[h])
         }
     }
+  }
 
   }
 
